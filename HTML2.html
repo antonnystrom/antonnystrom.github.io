@@ -29,6 +29,17 @@
 #knappen{
 width: 200px;
     height: 200px;
+    font-size: 40px;
+    
+}
+    
+    #tiden2{
+        font-size: 30px;
+    
+}
+    
+      #info{
+        font-size: 30px;
     
 }
     
@@ -147,6 +158,7 @@ width: 200px;
         
         window.d = new Date();
         $("#knappen").remove();
+        $("#info").remove();
         
 
 document.getElementById("ett").style.marginLeft = parseInt(Math.floor((Math.random() * 750) + 1)) + "px";
@@ -204,7 +216,7 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
             
-            document.getElementById("tiden2").innerHTML = mellantiden;
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
             
             $("#tio").hide();
             
@@ -217,7 +229,7 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
     <body>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        
+        <p id="info">press START then tap circles and the red circle last</p>
             <button onclick="random()" id="knappen">Start</button>
 
 <div class='foo' id=ett></div>
