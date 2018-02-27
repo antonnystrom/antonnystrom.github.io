@@ -12,6 +12,20 @@
         position: absolute;
 
 }
+        
+    
+    .fooslut {
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  background-color: red;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        position: absolute;
+
+}
+    
 
 
     
@@ -20,10 +34,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     
+
+    
     
   $(document).ready(function(){
     $("#ett").click(function(){
         $("#ett").hide();
+        
     });
    
 });
@@ -119,20 +136,14 @@
 });
     </script>
     
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#tio").click(function(){
-        $("#tio").hide();
-    });
 
-});
-    </script>
     
     
     <script>
     function random(){
+        
+        window.d = new Date();
+        
 
 document.getElementById("ett").style.marginLeft = parseInt(Math.floor((Math.random() * 750) + 1)) + "px";
 document.getElementById("ett").style.marginTop = parseInt(Math.floor((Math.random() * 1334) + 1)) + "px";
@@ -177,6 +188,27 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
 }
     
 </script>
+    
+    <script>
+
+    
+        
+    $(document).ready(function(){
+        $("#tio").click(function(){
+            
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden;
+            
+            $("#tio").hide();
+            
+    });
+
+});
+    </script>    
+    
 </head>
     <body>
     
@@ -193,11 +225,11 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
 <div class='foo' id=sju></div>
 <div class='foo' id=att></div>
 <div class='foo' id=nio></div>
-<div class='foo' id=tio></div>
+<div class='fooslut' id=tio></div>
         
         
         
-        
+        <p id="tiden2"></p>
 
     </body>
 </html>
