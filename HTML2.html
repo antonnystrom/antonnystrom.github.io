@@ -26,8 +26,11 @@
 
 }
     
-
-
+#knappen{
+width: 200px;
+    height: 200px;
+    
+}
     
 </style>
     
@@ -143,6 +146,7 @@
     function random(){
         
         window.d = new Date();
+        $("#knappen").remove();
         
 
 document.getElementById("ett").style.marginLeft = parseInt(Math.floor((Math.random() * 750) + 1)) + "px";
@@ -214,7 +218,7 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
-            <button onclick="random()">Start</button>
+            <button onclick="random()" id="knappen">Start</button>
 
 <div class='foo' id=ett></div>
 <div class='foo' id=tva></div>
