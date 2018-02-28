@@ -63,7 +63,9 @@ width: 200px;
         var screenAvailWidth = window.screen.availWidth;
         var availHeight = window.screen.availHeight;
         
-        document.getElementById("tiden2").innerHTML = parseInt(screenAvailWidth) + parseInt(availHeight);
+        document.getElementById("tiden2").innerHTML = "width =" + parseInt(screenAvailWidth);
+        document.getElementById("tiden2").innerHTML = "height =" + parseInt(availHeight);
+        
         
 
 document.getElementById("ett").style.marginLeft = parseInt( 90*Math.random() ) + "%";
@@ -424,6 +426,7 @@ document.getElementById("tio").style.marginTop = parseInt( 90*Math.random() ) + 
         
         
         <p id="tiden2"></p>
+        <p id="tiden1"></p>
 
     </body>
 </html>
