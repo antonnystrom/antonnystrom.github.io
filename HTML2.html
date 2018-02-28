@@ -2,12 +2,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-<style>
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
     
+<style>
+   
+
 *{
     margin: 0;
     padding: 0;
 }    
+ 
+
+  
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: slategray;
+      }    
+    
     .foo {
         box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -20,6 +35,7 @@
         border-color: black;
         border-width: 2px;
         position: absolute;
+  visibility: hidden;
 
 }
     
@@ -33,19 +49,27 @@ background-color: #4CAF50; /* Green */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px;
+    height: 100px;
+    width: 200px;
+    position:absolute; left:0; top:0; right:0; bottom:0; margin:auto;
+    
+    
+}
+    
+    
+#info{
+
+    height: 0px;
+    position:absolute; left:0; top:0; right:0; bottom:250; margin:auto;
+    
     
 }
     
     #tiden2{
         font-size: 30px;
     
-}
-    
-      #info{
-        font-size: 30px;
-    
-}
+
     
 </style>
     
@@ -71,41 +95,47 @@ background-color: #4CAF50; /* Green */
 
 document.getElementById("ett").style.marginLeft = "331";
 document.getElementById("ett").style.marginTop = "508";
-        
-        
+document.getElementById("ett").style.visibility = "visible";     
+ 
+    
 document.getElementById("tva").style.marginLeft = "0";
 document.getElementById("tva").style.marginTop = "0";
-        
+document.getElementById("tva").style.visibility = "visible";     
 
 document.getElementById("tre").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("tre").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
+document.getElementById("tre").style.visibility = "visible";
         
         
 document.getElementById("fyr").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("fyr").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
+document.getElementById("fyr").style.visibility = "visible";       
+        
         
 document.getElementById("fem").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("fem").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-        
+document.getElementById("fem").style.visibility = "visible";       
 
 document.getElementById("sex").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("sex").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-
+document.getElementById("sex").style.visibility = "visible";
+        
 document.getElementById("sju").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("sju").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-             
+document.getElementById("sju").style.visibility = "visible";          
 
 document.getElementById("att").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("att").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-        
+document.getElementById("att").style.visibility = "visible";      
 
+        
 document.getElementById("nio").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("nio").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-        
+document.getElementById("nio").style.visibility = "visible";      
 
 document.getElementById("tio").style.marginLeft = parseInt((Math.random() * (maxwidth - min + 1))) + min + "px";
 document.getElementById("tio").style.marginTop = parseInt((Math.random() * (maxheight - min + 1))) + min + "px";
-   
+document.getElementById("tio").style.visibility = "visible";  
 
 }
     
@@ -405,10 +435,10 @@ document.getElementById("tio").style.marginTop = parseInt((Math.random() * (maxh
     
 </head>
     <body>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <p id="info">press START then tap all circles in regular pace (don't try to be as quick as possible mmmkay)</p>
-            <button onclick="random()" id="knappen">Start</button>
+       <center> <p id="info">Tap times<br>
+            Button size: 44px</p>
+            <button onclick="random()" id="knappen">Start</button></center>
 
 <div class='foo' id=ett></div>
 <div class='foo' id=tva></div>
