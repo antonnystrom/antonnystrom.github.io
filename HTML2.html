@@ -1,7 +1,5 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">   
-    
     
 <style>
     .foo {
@@ -49,109 +47,7 @@ width: 200px;
 </style>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    
 
-    
-    
-  $(document).ready(function(){
-    $("#ett").click(function(){
-        $("#ett").hide();
-        
-    });
-   
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#tva").click(function(){
-        $("#tva").hide();
-    });
-
-});
-    </script>
-    
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#tre").click(function(){
-        $("#tre").hide();
-    });
-
-});
-    </script>
-    
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#fyr").click(function(){
-        $("#fyr").hide();
-    });
-
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#fem").click(function(){
-        $("#fem").hide();
-    });
-
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#sex").click(function(){
-        $("#sex").hide();
-    });
-
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#sju").click(function(){
-        $("#sju").hide();
-    });
-
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#att").click(function(){
-        $("#att").hide();
-    });
-
-});
-    </script>
-    
-    <script>
-    
-    
-  $(document).ready(function(){
-    $("#nio").click(function(){
-        $("#nio").hide();
-    });
-
-});
-    </script>
     
 
     
@@ -159,6 +55,7 @@ width: 200px;
     <script>
     function random(){
         
+        window.antalknapparkvar = 10;
         window.d = new Date();
         $("#knappen").remove();
         $("#info").remove();
@@ -209,12 +106,276 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
 </script>
     
     <script>
+    
 
     
+    
+  $(document).ready(function(){
+    $("#ett").click(function(){
+        if (antalknapparkvar == 1){
         
-    $(document).ready(function(){
-        $("#tio").click(function(){
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
             
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#ett").hide();
+        
+            
+            
+        }
+        else {
+        $("#ett").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#tva").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#tva").hide();
+            
+            
+        }
+        else {
+        $("#tva").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#tre").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#tre").hide();
+            
+            
+        }
+        else {
+        $("#tre").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#fyr").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#fyr").hide();
+            
+            
+        }
+        else {
+        $("#fyr").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#fem").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#fem").hide();
+            
+            
+        }
+        else {
+        $("#fem").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#sex").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#sex").hide();
+            
+            
+        }
+        else {
+        $("#sex").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#sju").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#sju").hide();
+            
+            
+        }
+        else {
+        $("#sju").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#att").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#att").hide();
+            
+            
+        }
+        else {
+        $("#att").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#nio").click(function(){
+        if (antalknapparkvar == 1){
+        
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("tiden2").innerHTML = mellantiden + " ms";
+            
+            $("#nio").hide();
+            
+            
+        }
+        else {
+        $("#nio").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
+    });
+   
+});
+    </script>
+    
+    <script>
+    
+
+    
+    
+  $(document).ready(function(){
+    $("#tio").click(function(){
+        if (antalknapparkvar == 1){
+        
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
@@ -223,10 +384,19 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
             
             $("#tio").hide();
             
+            
+        }
+        else {
+        $("#tio").hide();
+        antalknapparkvar = antalknapparkvar - 1    
+            
+        }
     });
-
+   
 });
-    </script>    
+    </script>
+    
+   
     
 </head>
     <body>
@@ -244,7 +414,7 @@ document.getElementById("tio").style.marginTop = parseInt(Math.floor((Math.rando
 <div class='foo' id=sju></div>
 <div class='foo' id=att></div>
 <div class='foo' id=nio></div>
-<div class='fooslut' id=tio></div>
+<div class='foo' id=tio></div>
         
         
         
