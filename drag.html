@@ -5,6 +5,44 @@
       <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Lato">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        
+       
+    
+
+        refreshData();
+        
+        function refreshData()
+        {
+        sekunder = 10;  // 5 Seconds
+
+        var element = document.getElementById('ruta');
+        var position = element.getBoundingClientRect();
+        var x = position.left;
+        var y = position.top;
+            
+        document.getElementById("xcoords").innerHTML = "X-coords " + x; 
+        document.getElementById("ycoords").innerHTML = "Y-coords " + y;  
+
+        if(x>300 && y>300){    
+            document.getElementById("ruta").style.backgroundColor = "red";
+           } 
+        setTimeout(refreshData, sekunder);
+        }
+        
+        
+    }) 
+        
+        
+        
+        
+    </script>
+    
+    
+    
 <style>
    
 
@@ -17,6 +55,9 @@
        height: 100px;
     width: 200px;
     background-color: aqua;
+    margin-left: 20px;
+    margin-top: 10px;
+    
     } 
     
 </style>
@@ -26,7 +67,8 @@
 
  <div class="draggable" id="ruta"></div>   
     <h1 class="draggable">Hello, World!</h1>
-    
+    <p id="xcoords"></p>
+    <p id="ycoords"></p>
 <script type="text/javascript" src="draggin.min.js"></script>    
 </body>
 </html>
