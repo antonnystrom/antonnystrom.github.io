@@ -10,15 +10,22 @@
     <script>
     $(document).ready(function(){
         
-       
-    
-
+        
+        var omgang = 0;
+        
         refreshData();
         
         function refreshData()
         {
-        sekunder = 10;  // 5 Seconds
+            
+        
+        sekunder = 1;  // 5 Seconds
 
+        if (omgang == 2){
+            document.getElementById("ruta").style.backgroundColor = "red";
+                }    
+            
+            
         var element = document.getElementById('ruta');
         var position = element.getBoundingClientRect();
         var x = position.left;
@@ -27,9 +34,32 @@
         document.getElementById("xcoords").innerHTML = "X-coords " + x; 
         document.getElementById("ycoords").innerHTML = "Y-coords " + y;  
 
-        if(y>400){    
+        if(y!=0 || x!=0){
+            if (omgang == 0){
+            window.d = new Date();
+            omgang = 1;
+                }
+                
+           }     
+            
+        if(y>400){   
+            if (omgang == 1){
             document.getElementById("ruta").style.backgroundColor = "red";
-           } 
+            
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+             document.getElementById("timedrag").innerHTML = "Time for drag: " + parseFloat(mellantiden/1000) + " seconds";
+                omgang = 2;
+    }
+            
+            
+           }
+        if(y<400){   
+            document.getElementById("ruta").style.backgroundColor = "greenyellow";
+            }
+            
         setTimeout(refreshData, sekunder);
         }
         
@@ -53,22 +83,34 @@
 
 #ruta{
        height: 100px;
-    width: 200px;
-    background-color: aqua;
-    margin-left: 20px;
-    margin-top: 10px;
+    width: 100px;
+    background-color: greenyellow;
+    margin-left: 0px;
+    margin-top: 0px;
     
     } 
+    
+#target{
+       height: 200px;
+    width: 400px;
+    background-color: green;
+    margin-left: 0px;
+    margin-top: 300px;
+    
+    }     
     
 </style>
 
 </head>
 <body>
 
- <div class="draggable" id="ruta"></div>   
-    <h1 class="draggable">Hello, World!</h1>
+ <div class="draggable" id="ruta"></div>
+<div id ="target"></div>
     <p id="xcoords"></p>
     <p id="ycoords"></p>
+    <p id="timedrag"></p>
+    <p id="infotext2"></p>
+    <p id="datavalue"></p>
 <script type="text/javascript" src="draggin.min.js"></script>    
 </body>
 </html>
