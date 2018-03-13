@@ -74,12 +74,11 @@
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size:klar " + parseInt(x) + "x"+ parseInt (y);
+        document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0) {
             
             window.d = new Date();
-            document.getElementById("infotext2").innerHTML = "square resized" + d;
             omgang = 1;
                
             }
@@ -96,7 +95,7 @@
             
             }
 
-        if (x=375 && omgang == 2){
+        if (x==375 && omgang == 2){
             
             element.style.backgroundColor = "red";
             
