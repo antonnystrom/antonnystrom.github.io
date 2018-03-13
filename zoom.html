@@ -91,10 +91,20 @@
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
             
-            document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
+            document.getElementById("infotext2").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             omgang = 2;
             
             }
+        if (x!=375){
+            
+            element.style.backgroundColor = "blue";
+            
+            }
+        if (x=375 && omgang == 2){
+            
+            element.style.backgroundColor = "red";
+            
+            }    
             
             
         setTimeout(refreshData, sekunder);
