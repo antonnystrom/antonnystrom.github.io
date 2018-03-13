@@ -22,7 +22,7 @@
         sekunder = 1;  // 5 Seconds
 
         if (omgang == 2){
-            document.getElementById("ruta").style.backgroundColor = "4CAF50";
+            document.getElementById("ruta").style.backgroundColor = "yellowgreen";
                 }    
             
             
@@ -31,8 +31,8 @@
         var x = position.left;
         var y = position.top;
             
-        //document.getElementById("xcoords").innerHTML = "X-coords " + x; 
-        //document.getElementById("ycoords").innerHTML = "Y-coords " + y;  
+        document.getElementById("xcoords").innerHTML = "X-coords " + x; 
+        document.getElementById("ycoords").innerHTML = "Y-coords " + y;  
 
         if(y!=0 || x!=0){
             if (omgang == 0){
@@ -44,7 +44,7 @@
             
         if(y>400 && y<450 && x>150 && x<200){   
             if (omgang == 1){
-            document.getElementById("ruta").style.backgroundColor = "4CAF50";
+            document.getElementById("ruta").style.backgroundColor = "yellowgreen";
             
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
@@ -56,8 +56,8 @@
             
             
            }
-        if(y<400){   
-            document.getElementById("ruta").style.backgroundColor = "deepskyblue";
+        if(y<400 || y>450 || x<150 || x>200){   
+            document.getElementById("ruta").style.backgroundColor = "whitesmoke";
             }
             
         setTimeout(refreshData, sekunder);
@@ -84,10 +84,17 @@
 #ruta{
        height: 100px;
     width: 100px;
-    background-color: deepskyblue;
     margin-left: 0px;
     margin-top: 0px;
     position: absolute;
+    background-color: whitesmoke;
+    border-radius: 100%;
+    border-style: solid;
+        border-color: darkslategray;
+        border-width: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 
     
     } 
@@ -95,10 +102,16 @@
 #target{
        height: 150px;
     width: 150px;
-    background-color: dimgray;
+    background-color: none;
     margin-left: 150px;
     margin-top: 400px;
     position: absolute;
+    border-style: dashed;
+    border-color: darkslategray;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 4%;
 
     
     }     
@@ -106,7 +119,7 @@
 body {
         font-family: 'Lato', sans-serif;
         font-size: 24px;
-        color: slategray;
+        color: darkslategray;
       }   
     
 </style>
