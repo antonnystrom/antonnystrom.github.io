@@ -45,7 +45,25 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    position: absolute;
 }
+        
+        
+#zoomtarget {
+    width:375px;
+    height:375px;
+    margin:0 auto;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    border-style: solid;
+        border-color: darkslategray;
+        border-width: 3px;
+        border-style: dashed;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+}        
 
 #infotext {
     position: absolute;
@@ -137,7 +155,9 @@
     <p id="infotext2"></p>
     <div class="wrapper">
     <div class="wrap">
+        <div id="zoomtarget"></div>
         <div id="square"></div>
+        
     </div>
 </div>    
    
