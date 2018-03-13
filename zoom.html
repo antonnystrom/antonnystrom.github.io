@@ -68,24 +68,24 @@
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size:wt " + parseInt(x) + "x"+ parseInt (y);
+        document.getElementById("infotext").innerHTML = "square size:ok " + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0) {
             
             //window.d = new Date();
-            //något knasigt med omgang
             document.getElementById("infotext").innerHTML = "square resized";
+            omgang = 1;
                
             }
                 
         if(x == 375 && omgang == 1) {  
             
             element.style.backgroundColor = "red";
-            var forstatiden = window.d.getTime();
-            var andratiden =  new Date().getTime();
-            var mellantiden = andratiden - forstatiden;
+           // var forstatiden = window.d.getTime();
+        //    var andratiden =  new Date().getTime();
+        //    var mellantiden = andratiden - forstatiden;
             
-            document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
+          //  document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             omgang = 2;
             
             }
