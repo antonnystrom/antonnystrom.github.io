@@ -68,12 +68,12 @@
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size:ok " + parseInt(x) + "x"+ parseInt (y);
+        document.getElementById("infotext").innerHTML = "square size:k " + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0) {
             
             //window.d = new Date();
-            document.getElementById("infotext").innerHTML = "square resized";
+            document.getElementById("infotext2").innerHTML = "square resized";
             omgang = 1;
                
             }
@@ -105,7 +105,7 @@
 <body>
     
     <p id="infotext"></p>
-    
+    <p id="infotext2"></p>
     <div class="wrapper">
     <div class="wrap">
         <div id="square"></div>
