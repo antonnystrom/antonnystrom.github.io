@@ -66,21 +66,19 @@
         var startstorlek = 100;
         var maxstorlek = 375;
             
-        var nummer = new Date();
-            
             
         sekunder = 1;  // 5 Seconds
         document.getElementById("infotext").innerHTML = "square size:o " + parseInt(x) + "x"+ parseInt (y);
            
-        if (x != startstorlek)  {
-            if (omgang == 0){
+        if (x != 100 && omgang == 0)  {
+            
             window.d = new Date();
             omgang = 1;
-                }
+                
             }
                 
-        if(x == maxstorlek) {  
-            if (omgang == 1){
+        if(x == 375 && omgang == 1) {  
+            
             element.style.backgroundColor = "red";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
@@ -88,14 +86,9 @@
             
             document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             omgang = 2;
+            
             }
-            }
-            else
-                {
-                    
-                   element.style.backgroundColor = "blue"; 
-                    
-                }
+            
             
         setTimeout(refreshData, sekunder);
         }
