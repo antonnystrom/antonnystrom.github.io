@@ -52,6 +52,8 @@
         
     $(document).ready(function(){
         
+        var omgang = 0;
+        
         refreshData();
         
         function refreshData()
@@ -71,19 +73,21 @@
         document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
            
         if (x != startstorlek)  
-            {
-                window.d = new Date();
+            if (omgang == 0){
+            window.d = new Date();
+            omgang = 1;
                 }
                 
         if(x == maxstorlek) {  
-            
+            if (omgang == 1){
             element.style.backgroundColor = "red";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
-            
+            omgang = 2;
+            }
             }
             else
                 {
