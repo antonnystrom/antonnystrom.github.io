@@ -61,17 +61,28 @@
         var x = element.clientWidth;
         var y = element.clientHeight;    
             
+        var startstorlek = 100;
+        var maxstorlek = 375;
             
         var nummer = new Date();
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size:c " + parseInt(x) + "x"+ parseInt (y);
-            
-        if(x == 375) {  
+        document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
+           
+        if (x != startstorlek)  
+            {
+                window.d = new Date();
+                }
+                
+        if(x == maxstorlek) {  
             
             element.style.backgroundColor = "red";
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
             
+            document.getElementById("infotext").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             
             }
             else
