@@ -35,12 +35,48 @@
     background:blue;
     margin:0 auto;
 }
-        
+
+#infotext {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+}        
         
     
     </style>
     
+  
+    <script>
+    $(document).ready(function(){
+        
+        refreshData();
+        
+        function refreshData()
+        {
+            
+        var element = document.getElementById('square');
+        var position = element.getBoundingClientRect();
+        var x = element.clientWidth;
+        var y = position.top;    
+            
+            
+        var nummer = new Date();
+            
+            
+        sekunder = 1;  // 5 Seconds
+            
+            
+        document.getElementById("infotext").innerHTML = "numret är: " + parseInt(x) + " "+ parseInt (y);
+            
+           
+            
+            
+        setTimeout(refreshData, sekunder);
+        }
+        
+        }) 
     
+    </script>
 </head>
 
 
@@ -48,6 +84,7 @@
     
 <body>
     
+    <p id="infotext"></p>
     
     <div class="wrapper">
     <div class="wrap">
