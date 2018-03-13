@@ -55,22 +55,22 @@
         {
             
         var element = document.getElementById('square');
-        var position = element.getBoundingClientRect();
         var x = element.clientWidth;
-        var y = position.top;    
+        var y = element.clientHeight;    
             
             
         var nummer = new Date();
             
             
         sekunder = 1;  // 5 Seconds
+        document.getElementById("infotext").innerHTML = "square size:v " + parseInt(x) + "x"+ parseInt (y);
+            
+        if(x == 375) {  
+            
+            element.style.backgroundColor = "red";
             
             
-        document.getElementById("infotext").innerHTML = "numret är: " + parseInt(x) + " "+ parseInt (y);
-            
-           
-            
-            
+            }
         setTimeout(refreshData, sekunder);
         }
         
