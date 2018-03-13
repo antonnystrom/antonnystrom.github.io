@@ -68,12 +68,13 @@
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size:i " + parseInt(x) + "x"+ parseInt (y);
+        document.getElementById("infotext").innerHTML = "square size:p " + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0)  {
             
             window.d = new Date();
             omgang = 1;
+            document.getElementById("infotext").innerHTML = "square resized" + d;
                 
             }
                 
