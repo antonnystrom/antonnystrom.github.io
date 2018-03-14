@@ -28,8 +28,8 @@ body {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: yellowgreen;
         border-style: solid;
         border-color: black;
@@ -71,6 +71,24 @@ background-color: #4CAF50; /* Green */
     position:absolute; left:0; top:0; right:0; bottom:250; margin:auto;
     
 }
+    
+    
+    
+#nextlink{
+        background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    height: 100px;
+    width: 200px;
+    position:absolute; left:0; top:0; right:0; bottom:0; margin:auto;
+    visibility: hidden;
+    
+}    
     
 </style>
     
@@ -158,6 +176,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#ett").hide();
         
@@ -188,6 +207,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tva").hide();
             
@@ -217,6 +237,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tre").hide();
             
@@ -246,6 +267,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#fyr").hide();
             
@@ -275,6 +297,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#fem").hide();
             
@@ -304,6 +327,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#sex").hide();
             
@@ -333,6 +357,8 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
+            
             $("#sju").hide();
             
             
@@ -361,6 +387,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#att").hide();
             
@@ -390,6 +417,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#nio").hide();
             
@@ -419,6 +447,7 @@ document.getElementById("tio").style.visibility = "visible";
             var mellantiden = andratiden - forstatiden;
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tio").hide();
             
@@ -454,8 +483,7 @@ document.getElementById("tio").style.visibility = "visible";
 <div class='foo' id=nio></div>
 <div class='foo' id=tio></div>
         
-        <a href="tests.html">tillbaka</a>
-        
+        <input type="button" onclick="location.href='tests.html';" value="Return" id="nextlink" />
         <p id="tiden2"></p>
         <center><p id="tiden1"></p></center>
 
