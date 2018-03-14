@@ -88,10 +88,12 @@ background-color: #4CAF50; /* Green */
         $("#knappen").remove();
         $("#info").remove();
 
+        knappstorlek = document.getElementById("ett").clientWidth + 4; //+4 för bordern är 2
+        
         
         min = 0;
-        maxwidth = 331;
-        maxheight = 508;
+        maxwidth = 375-knappstorlek;
+        maxheight = 667-knappstorlek;
         
 
 document.getElementById("ett").style.marginLeft = "331";
@@ -452,7 +454,7 @@ document.getElementById("tio").style.visibility = "visible";
 <div class='foo' id=nio></div>
 <div class='foo' id=tio></div>
         
-        
+        <p id="debug"></p>
         
         <p id="tiden2"></p>
         <center><p id="tiden1"></p></center>
