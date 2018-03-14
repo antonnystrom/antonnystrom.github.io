@@ -10,6 +10,7 @@
         *{
     margin: 0;
     padding: 0;
+        color: darkslategrey;
 }  
         
     #grejen {
@@ -24,7 +25,7 @@
 }
         
         #grejen2 {
-    background-color: skyblue;
+    background-color: whitesmoke;
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -37,15 +38,69 @@
    
     </style>
     
-</head><body>
+    <script>
+        
+        
+        
+    function sitescript(){
+        
+        var omgang = 0;
+        
+        refreshData();
+        
+        function refreshData()
+        {
+            
+            sekunder = 1;  // 5 Seconds
+            
+            rutanheight = document.getElementById("rutan").clientHeight;
+            
+            
+            
+            
+            if(rutanheight!=1200 && omgang == 0)
+            {
+                window.d = new Date();
+                omgang = 1;
+                
+            }
+            
+            
+            if(rutanheight==0 && omgang == 1){
+                
+                var forstatiden = window.d.getTime();
+                var andratiden =  new Date().getTime();
+                var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("infotext").innerHTML = "time to flick 9 times: " + parseFloat(mellantiden/1000/9) + " seconds"; //delat på antal flicks-1 eftersom det börjar räkna när första försvinner
+                
+                omgang = 2;
+                
+            }
+            
+           setTimeout(refreshData, sekunder); 
+            
+        }    
+        }
+        
+        
+        
+        
+    
+    </script>
+    
+</head><body onload="sitescript();">
 
-
+<p id=infotext></p>
+    
+   
+    
 <div class="examples ng-scope" ng-app="angularjs-dragula-example">
 
   
   <div class="parent ng-scope" ng-controller="AnotherExampleCtrl">
     <div class="wrapper">
-      <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;">
+      <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
         <div id="grejen"></div>
         <div id="grejen2"></div>
         <div id="grejen"></div>
@@ -66,6 +121,7 @@
     <br>
 
   <a href="tests.html">return</a>
+
 
 
 </div>
