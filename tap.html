@@ -64,16 +64,19 @@ body {
     $("#knappen").click(function(){
         
         
-        if(omgang==20){
+        if(omgang==19){
             
+            omgang = omgang + 1;
             
             $('#knappen').unbind("click");
             
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = mellantiden/1000/20
+            var tiden = mellantiden.toFixed(3);
             
-            document.getElementById("infotext").innerHTML = "Time to tap " + parseInt(omgang) + " times took: " + parseFloat(mellantiden/1000) + " seconds";
+            document.getElementById("infotext").innerHTML = "Time to tap " + parseInt(omgang) + " times took: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
             
        
         }
