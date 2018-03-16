@@ -74,7 +74,7 @@ body {
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
             mellantiden = mellantiden/1000/20
-            var tiden = mellantiden.toFixed(3);
+            var tiden = mellantiden.toFixed(4);
             
             document.getElementById("infotext").innerHTML = "Time to tap " + parseInt(omgang) + " times took: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
             
