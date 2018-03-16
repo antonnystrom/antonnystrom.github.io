@@ -1,0 +1,127 @@
+<html>
+    
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+
+  
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      } 
+    
+    
+ .wrapper {
+    width:100%;
+    height:100%;
+    position: relative;
+    display: table;
+}
+
+.wrap {
+    display: table-cell;
+    vertical-align: middle;
+    align-content: center;
+    
+    }
+    
+#knappen{
+    
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+        border-style: solid;
+        border-color: darkslategrey;
+    border-width: 2px;
+        margin-top: 20px;
+    
+    }
+    
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    function sitescript(){
+        document.getElementById("infotext").innerHTML = "Ready for some tapping ;)";
+        var omgang = 0;
+        
+    $("#knappen").click(function(){
+        
+        
+        if(omgang==20){
+            
+            
+            $('#knappen').unbind("click");
+            
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("infotext").innerHTML = "Time to tap " + parseInt(omgang) + " times took: " + parseFloat(mellantiden/1000) + " seconds";
+            
+       
+        }
+        
+        
+        if(omgang >0 && omgang<20){
+        
+        omgang = omgang + 1;
+        document.getElementById("infotext").innerHTML = "Button tapped: " + parseInt(omgang) + " times";
+        
+        }
+        
+        
+        if (omgang == 0){
+            
+            window.d = new Date();
+            omgang = omgang + 1;
+            document.getElementById("infotext").innerHTML = "Button tapped: " + parseInt(omgang) + " times";
+            
+            
+            
+        }
+        
+        
+        
+        
+            
+        })
+    
+    }
+    </script>
+</head>
+<body onload="sitescript();">
+    
+    <a href="tests.html">back</a>
+    
+    <div class="wrapper">
+        <div class="wrap">
+            <center>   
+             
+             <p id="infotext">hej</p>
+             <div id="knappen"></div>
+                
+            </center>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
