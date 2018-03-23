@@ -58,7 +58,7 @@ body {
     
     <script>
     function sitescript(){
-        document.getElementById("infotext").innerHTML = "Ready for some tapping ;)";
+        document.getElementById("infotext").innerHTML = "Tap the circle";
         var omgang = 0;
         
     $("#knappen").click(function(){
@@ -76,7 +76,7 @@ body {
             mellantiden = mellantiden/1000/20
             var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("infotext").innerHTML = "Time to tap " + parseInt(omgang) + " times took: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
+            document.getElementById("infotext").innerHTML = "Average tap time: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
             
        
         }
@@ -85,7 +85,7 @@ body {
         if(omgang >0 && omgang<20){
         
         omgang = omgang + 1;
-        document.getElementById("infotext").innerHTML = "Button tapped: " + parseInt(omgang) + " times";
+        document.getElementById("infotext").innerHTML = "Circle tapped: " + parseInt(omgang) + " times";
         
         }
         
@@ -94,7 +94,7 @@ body {
             
             window.d = new Date();
             omgang = omgang + 1;
-            document.getElementById("infotext").innerHTML = "Button tapped: " + parseInt(omgang) + " times";
+            document.getElementById("infotext").innerHTML = "Circle tapped: " + parseInt(omgang) + " times";
             
             
             
