@@ -12,7 +12,7 @@
         *{
     margin: 0;
     padding: 0;
-      
+            overflow: hidden;
 }    
  
 
@@ -123,7 +123,7 @@ body {
         
 #wrapper2 {
     width:100%;
-    margin-top: -929px;
+    margin-top: 0px;
     position: relative;
     display: table;
     visibility: hidden;
@@ -150,7 +150,7 @@ body {
         
  .wrapper{
             
-            margin-top: 0px;
+            margin-top: 567px;
             margin-left: 0px;
         }        
         
@@ -161,13 +161,7 @@ body {
             
         }
 
-        .examples ng-scope{
-            
-             overflow: hidden;
-            position: fixed;
-            
-            
-        }
+   
     </style>
     
     <script>
@@ -193,53 +187,89 @@ body {
             document.getElementById("infotext2").innerHTML = parseInt(rutanheight)
             
             
-            if (rutanheight==900 && omgang == 0){
+            if (document.getElementById("flick1").clientHeight == 0){
+                 window.d = new Date();
+                omgang = omgang+1;
+                document.getElementById("flick2").style.display = "block";
+                
+                
+            }
+            
+            if (document.getElementById("flick2").clientHeight == 0 && document.getElementById("flick1").clientHeight == 0){
+                omgang = omgang+1;
+                document.getElementById("flick3").style.display = "block";
+                
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            if (rutanheight==10 && omgang == 0){
                 window.d = new Date();
                 omgang = omgang+1;
-                document.getElementById("wrapper2").style.marginTop = "-300px";
-                document.getElementById("flick2").style.visibility = "visible";
-             
+                document.getElementById("flick2").style.display = "block";
                 }
             
-            if (rutanheight==800 && omgang == 1){
-        
-                omgang = omgang+1;
-                document.getElementById("flick3").style.display = "inline";
+            if (rutanheight==10 && omgang == 1){
+                if (document.getElementById("flick2").style.display == "bajs"){
+                    
+                    omgang = omgang+1;
+                    document.getElementById("flick3").style.display = "block";
+                    
+                    
+                }
+                
+                
                 }
             
-            if (rutanheight==700 && omgang == 2){
+            if (rutanheight==10 && omgang == 2){
+                if (document.getElementById("flick3").style.display == "bajs"){
+                      
                 omgang = omgang+1;
-                document.getElementById("flick4").style.visibility = "visible";
+                document.getElementById("flick4").style.display = "block";
+                    
+                }
+                
+              
                 }
             
-            if (rutanheight==600 && omgang == 3){
+            if (rutanheight==10 && omgang == 3){
                 omgang = omgang+1;
-                document.getElementById("flick5").style.visibility = "visible";
+                document.getElementById("flick5").style.display = "block";
                 }
             
-            if (rutanheight==500 && omgang == 4){
+            if (rutanheight==10 && omgang == 4){
                 omgang = omgang+1;
-                document.getElementById("flick6").style.visibility = "visible";
+                document.getElementById("flick6").style.display = "block";
                 }
             
-            if (rutanheight==400 && omgang == 5){
+            if (rutanheight==10 && omgang == 5){
                 omgang = omgang+1;
-                document.getElementById("flick7").style.visibility = "visible";
+                document.getElementById("flick7").style.display = "block";
                 }
             
-            if (rutanheight==300 && omgang == 6){
+            if (rutanheight==10 && omgang == 6){
                 omgang = omgang+1;
-                document.getElementById("flick8").style.visibility = "visible";
+                document.getElementById("flick8").style.display = "block";
                 }
             
-            if (rutanheight==200 && omgang == 7){
+            if (rutanheight==10 && omgang == 7){
                 omgang = omgang+1;
-                document.getElementById("flick9").style.visibility = "visible";
+                document.getElementById("flick9").style.display = "block";
                 }
             
-            if (rutanheight==100 && omgang == 8){
+            if (rutanheight==10 && omgang == 8){
                 omgang = omgang+1;
-                document.getElementById("flick10").style.visibility = "visible";
+                document.getElementById("flick10").style.display = "block";
                 
                 }
             
@@ -287,22 +317,29 @@ body {
     </div>
 </div>    
     
-<div class="examples ng-scope" ng-app="angularjs-dragula-example">
+<div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
 
   
-  <div class="parent ng-scope" ng-controller="AnotherExampleCtrl">
+  <div class="parent ng-scope" ng-controller="AnotherExampleCtrl" id ="flicken1">
     <div class="wrapper">
       <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
-        <div id="flick10" class="grejen"></div>
-        <div id="flick9" class="grejen2"></div>
-        <div id="flick8" class="grejen"></div>
-        <div id="flick7" class="grejen2"></div>
-        <div id="flick6" class="grejen"></div>
-        <div id="flick5" class="grejen2"></div>
-        <div id="flick4" class="grejen"></div>
-        <div id="flick3" class="grejen2"></div>
-        <div id="flick2" class="grejen"></div>
-        <div id="flick1" class="grejen2"></div>
+        <div id="flick1" class="grejen"></div>
+          
+      </div>
+    </div>
+    </div>
+    <div class="parent ng-scope" ng-controller="AnotherExampleCtrl" id="flicken2">
+    <div class="wrapper">
+      <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
+        <div id="flick1" class="grejen"></div>
+          
+      </div>
+    </div>
+    </div>
+    <div class="parent ng-scope" ng-controller="AnotherExampleCtrl" id="flicken3">
+    <div class="wrapper">
+      <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
+        <div id="flick1" class="grejen"></div>
           
       </div>
     </div>
