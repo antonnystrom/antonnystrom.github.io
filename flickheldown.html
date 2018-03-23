@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://bevacqua.github.io/angularjs-dragula/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><link rel="shortcut icon" href="http://bevacqua.github.io/angularjs-dragula/favicon.ico">
+<link href="./angularjs-dragula_files/dragula.css" rel="stylesheet" type="text/css">
+<link href="./angularjs-dragula_files/example.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+
+    <style>
+        
+        *{
+    margin: 0;
+    padding: 0;
+            overflow: hidden;
+}    
+ 
+
+  
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      } 
+        
+    .grejen {
+    background-color: yellowgreen;
+    background-image: url(uparrow.png);
+    background-size: auto 100%;
+    width: 375px;
+    height: 200px;
+    border-radius: 0%;
+        border-style: solid;
+        border-color: darkslategrey;
+    border-width: 2px;
+        margin-top: 0px;
+   
+        
+}
+        
+        
+        
+        .grejen2 {
+    background-color: whitesmoke;
+            background-image: url(uparrow.png);
+    background-size: auto 100%;
+    width: 375px;
+    height: 200px;
+    border-radius: 0%;
+        border-style: solid;
+        border-color: darkslategrey;
+    border-width: 2px;
+            margin-top: 0px;
+}        
+        
+        #flick1{
+            
+            background-color: yellowgreen;
+            
+            
+        }
+        #flick2{
+            
+            background-color: whitesmoke;
+            visibility: hidden;
+            
+        }#flick3{
+            
+            background-color: yellowgreen;
+            visibility: hidden;
+            
+        }#flick4{
+            
+            background-color: whitesmoke;
+            visibility: hidden;
+            
+        }#flick5{
+            
+            background-color: yellowgreen;
+            visibility: hidden;
+            
+        }#flick6{
+            
+            background-color: whitesmoke;
+            visibility: hidden;
+            
+        }#flick7{
+            
+            background-color: yellowgreen;
+            visibility: hidden;
+            
+        }#flick8{
+            
+            background-color: whitesmoke;
+            visibility: hidden;
+            
+        }#flick9{
+            
+            background-color: yellowgreen;
+            visibility: hidden;
+            
+        }#flick10{
+            
+            background-color: whitesmoke;
+            visibility: hidden;
+            
+        }
+
+        
+        
+        
+        .stretch {
+    width:100%;
+   
+}
+        
+
+        
+
+
+        
+#wrapper2 {
+    width:100%;
+    margin-top: 0px;
+    position: relative;
+    display: table;
+    visibility: hidden;
+    transform: rotate(180deg);
+}
+
+#wrap {
+    display: table-cell;
+    vertical-align: middle;
+    align-content: center;
+    visibility: hidden;
+    margin-top: 200px;
+
+    
+    }
+        
+        
+#infotext2 {
+    position: absolute;
+    
+    }
+
+        
+        
+        
+ .wrapper{
+            
+            margin-top: 467px;
+            margin-left: 0px;
+        }        
+        
+        #link{
+            display: block;
+            text-decoration: none;
+        color: darkslategray;
+            
+        }
+
+   
+    </style>
+    
+    <script>
+        
+        
+        
+    function sitescript(){
+ 
+        
+        
+        
+        var omgang = 0;
+        
+        refreshData();
+        
+        function refreshData()
+        {
+            
+            sekunder = 1;  // 5 Seconds
+            
+            rutanheight = document.getElementById("rutan").clientHeight;
+
+            document.getElementById("infotext2").innerHTML = parseInt(rutanheight)
+            
+            
+            if (rutanheight==1800 && omgang == 0){
+                window.d = new Date();
+                omgang = omgang+1;
+                document.getElementById("flick2").style.visibility = "visible";
+                }
+            
+            if (rutanheight==1600 && omgang == 1){
+        
+                omgang = omgang+1;
+                document.getElementById("flick3").style.visibility = "visible";
+                }
+            
+            if (rutanheight==1400 && omgang == 2){
+                omgang = omgang+1;
+                document.getElementById("flick4").style.visibility = "visible";
+                }
+            
+            if (rutanheight==1200 && omgang == 3){
+                omgang = omgang+1;
+                document.getElementById("flick5").style.visibility = "visible";
+                }
+            
+            if (rutanheight==1000 && omgang == 4){
+                omgang = omgang+1;
+                document.getElementById("flick6").style.visibility = "visible";
+                }
+            
+            if (rutanheight==800 && omgang == 5){
+                omgang = omgang+1;
+                document.getElementById("flick7").style.visibility = "visible";
+                }
+            
+            if (rutanheight==600 && omgang == 6){
+                omgang = omgang+1;
+                document.getElementById("flick8").style.visibility = "visible";
+                }
+            
+            if (rutanheight==400 && omgang == 7){
+                omgang = omgang+1;
+                document.getElementById("flick9").style.visibility = "visible";
+                }
+            
+            if (rutanheight==200 && omgang == 8){
+                omgang = omgang+1;
+                document.getElementById("flick10").style.visibility = "visible";
+                
+                }
+            
+            
+            
+            
+            if(rutanheight==0 && omgang == 9){
+                
+                omgang = omgang+1;
+                
+                var forstatiden = window.d.getTime();
+                var andratiden =  new Date().getTime();
+                var mellantiden = andratiden - forstatiden;
+                mellantiden = mellantiden/1000/9 //delat på antal flicks-1 eftersom det börjar räkna när första försvinner
+                var tiden = mellantiden.toFixed(4);
+            
+            document.getElementById("infotext").innerHTML = "Time per flick (right): " + tiden + " seconds"; 
+                document.getElementById("wrapper2").style.visibility = "visible";
+                document.getElementById("wrap").style.visibility = "visible";  
+          
+                
+                
+            }
+            
+           setTimeout(refreshData, sekunder); 
+            
+        }    
+        }
+        
+        
+        
+        
+    
+    </script>
+    
+</head><body onload="sitescript();">
+
+<p id="infotext2">hej</p>
+    
+<div id="wrapper2">
+        <div id="wrap">
+           <center> <p id=infotext></p>
+            <a href="tests.html" id="link">Return</a>
+               </center>
+    </div>
+</div>    
+    
+<div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
+
+  
+  <div class="parent ng-scope" ng-controller="AnotherExampleCtrl">
+    <div class="wrapper">
+      <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
+        <div id="flick1" class="grejen"></div>
+        <div id="flick2" class="grejen2"></div>
+        <div id="flick3" class="grejen"></div>
+        <div id="flick4" class="grejen2"></div>
+        <div id="flick5" class="grejen"></div>
+        <div id="flick6" class="grejen2"></div>
+        <div id="flick7" class="grejen"></div>
+        <div id="flick8" class="grejen2"></div>
+        <div id="flick9" class="grejen"></div>
+        <div id="flick10" class="grejen2"></div>
+          
+      </div>
+    </div>
+    </div>
+
+
+<br>
+    <br>
+
+
+
+</div>
+<script src="./angularjs-dragula_files/angular.js"></script>
+<script src="./angularjs-dragula_files/angularjs-dragula.js"></script>
+<script src="./angularjs-dragula_files/example.js"></script>
+</body></html>

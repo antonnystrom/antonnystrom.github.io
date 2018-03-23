@@ -12,7 +12,7 @@
         *{
     margin: 0;
     padding: 0;
-      
+            overflow: hidden;
 }    
  
 
@@ -27,10 +27,10 @@ body {
         
     .grejen {
     background-color: yellowgreen;
-    background-image: url(rightarrow.png);
-    background-size: 100% auto;
+    background-image: url(uparrow.png);
+    background-size: auto 100%;
     width: 375px;
-    height: 100px;
+    height: 200px;
     border-radius: 0%;
         border-style: solid;
         border-color: darkslategrey;
@@ -44,10 +44,10 @@ body {
         
         .grejen2 {
     background-color: whitesmoke;
-            background-image: url(rightarrow.png);
-    background-size: 100% auto;
+            background-image: url(uparrow.png);
+    background-size: auto 100%;
     width: 375px;
-    height: 100px;
+    height: 200px;
     border-radius: 0%;
         border-style: solid;
         border-color: darkslategrey;
@@ -64,47 +64,47 @@ body {
         #flick2{
             
             background-color: whitesmoke;
-            display: none;
+            visibility: hidden;
             
         }#flick3{
             
             background-color: yellowgreen;
-            display: none;
+            visibility: hidden;
             
         }#flick4{
             
             background-color: whitesmoke;
-            display: none;
+            visibility: hidden;
             
         }#flick5{
             
             background-color: yellowgreen;
-            display: none;
+            visibility: hidden;
             
         }#flick6{
             
             background-color: whitesmoke;
-            display: none;
+            visibility: hidden;
             
         }#flick7{
             
             background-color: yellowgreen;
-            display: none;
+            visibility: hidden;
             
         }#flick8{
             
             background-color: whitesmoke;
-            display: none;
+            visibility: hidden;
             
         }#flick9{
             
             background-color: yellowgreen;
-            display: none;
+            visibility: hidden;
             
         }#flick10{
             
             background-color: whitesmoke;
-            display: none;
+            visibility: hidden;
             
         }
 
@@ -123,10 +123,11 @@ body {
         
 #wrapper2 {
     width:100%;
-    margin-top: -929px;
+    margin-top: 0px;
     position: relative;
     display: table;
     visibility: hidden;
+    transform: rotate(0deg);
 }
 
 #wrap {
@@ -134,7 +135,7 @@ body {
     vertical-align: middle;
     align-content: center;
     visibility: hidden;
-    
+    margin-top: 200px;
 
     
     }
@@ -150,7 +151,7 @@ body {
         
  .wrapper{
             
-            margin-top: 0px;
+            margin-top: 467px;
             margin-left: 0px;
         }        
         
@@ -161,13 +162,7 @@ body {
             
         }
 
-        .examples ng-scope{
-            
-             overflow: hidden;
-            position: fixed;
-            
-            
-        }
+   
     </style>
     
     <script>
@@ -193,51 +188,49 @@ body {
             document.getElementById("infotext2").innerHTML = parseInt(rutanheight)
             
             
-            if (rutanheight==900 && omgang == 0){
+            if (rutanheight==1800 && omgang == 0){
                 window.d = new Date();
                 omgang = omgang+1;
-                document.getElementById("wrapper2").style.marginTop = "-300px";
                 document.getElementById("flick2").style.visibility = "visible";
-             
                 }
             
-            if (rutanheight==800 && omgang == 1){
+            if (rutanheight==1600 && omgang == 1){
         
                 omgang = omgang+1;
-                document.getElementById("flick3").style.display = "inline";
+                document.getElementById("flick3").style.visibility = "visible";
                 }
             
-            if (rutanheight==700 && omgang == 2){
+            if (rutanheight==1400 && omgang == 2){
                 omgang = omgang+1;
                 document.getElementById("flick4").style.visibility = "visible";
                 }
             
-            if (rutanheight==600 && omgang == 3){
+            if (rutanheight==1200 && omgang == 3){
                 omgang = omgang+1;
                 document.getElementById("flick5").style.visibility = "visible";
                 }
             
-            if (rutanheight==500 && omgang == 4){
+            if (rutanheight==1000 && omgang == 4){
                 omgang = omgang+1;
                 document.getElementById("flick6").style.visibility = "visible";
                 }
             
-            if (rutanheight==400 && omgang == 5){
+            if (rutanheight==800 && omgang == 5){
                 omgang = omgang+1;
                 document.getElementById("flick7").style.visibility = "visible";
                 }
             
-            if (rutanheight==300 && omgang == 6){
+            if (rutanheight==600 && omgang == 6){
                 omgang = omgang+1;
                 document.getElementById("flick8").style.visibility = "visible";
                 }
             
-            if (rutanheight==200 && omgang == 7){
+            if (rutanheight==400 && omgang == 7){
                 omgang = omgang+1;
                 document.getElementById("flick9").style.visibility = "visible";
                 }
             
-            if (rutanheight==100 && omgang == 8){
+            if (rutanheight==200 && omgang == 8){
                 omgang = omgang+1;
                 document.getElementById("flick10").style.visibility = "visible";
                 
@@ -282,27 +275,27 @@ body {
 <div id="wrapper2">
         <div id="wrap">
            <center> <p id=infotext></p>
-            <a href="tests.html" id="link">Return</a>
+            <a href="flickheldown.html" id="link">Next</a>
                </center>
     </div>
 </div>    
     
-<div class="examples ng-scope" ng-app="angularjs-dragula-example">
+<div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
 
   
   <div class="parent ng-scope" ng-controller="AnotherExampleCtrl">
     <div class="wrapper">
       <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
-        <div id="flick10" class="grejen"></div>
-        <div id="flick9" class="grejen2"></div>
-        <div id="flick8" class="grejen"></div>
-        <div id="flick7" class="grejen2"></div>
-        <div id="flick6" class="grejen"></div>
-        <div id="flick5" class="grejen2"></div>
-        <div id="flick4" class="grejen"></div>
-        <div id="flick3" class="grejen2"></div>
-        <div id="flick2" class="grejen"></div>
-        <div id="flick1" class="grejen2"></div>
+        <div id="flick1" class="grejen"></div>
+        <div id="flick2" class="grejen2"></div>
+        <div id="flick3" class="grejen"></div>
+        <div id="flick4" class="grejen2"></div>
+        <div id="flick5" class="grejen"></div>
+        <div id="flick6" class="grejen2"></div>
+        <div id="flick7" class="grejen"></div>
+        <div id="flick8" class="grejen2"></div>
+        <div id="flick9" class="grejen"></div>
+        <div id="flick10" class="grejen2"></div>
           
       </div>
     </div>

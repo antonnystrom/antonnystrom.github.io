@@ -27,10 +27,10 @@ body {
         
     .grejen {
     background-color: yellowgreen;
-    background-image: url(uparrow.png);
-    background-size: auto 100%;
-    width: 375px;
-    height: 200px;
+    background-image: url(rightarrow.png);
+    background-size: 100% auto;
+    width: 100px;
+    height: 667px;
     border-radius: 0%;
         border-style: solid;
         border-color: darkslategrey;
@@ -44,10 +44,10 @@ body {
         
         .grejen2 {
     background-color: whitesmoke;
-            background-image: url(uparrow.png);
-    background-size: auto 100%;
-    width: 375px;
-    height: 200px;
+            background-image: url(rightarrow.png);
+    background-size: 100% auto;
+    width: 100px;
+    height: 667px;
     border-radius: 0%;
         border-style: solid;
         border-color: darkslategrey;
@@ -134,8 +134,6 @@ body {
     vertical-align: middle;
     align-content: center;
     visibility: hidden;
-    margin-top: 200px;
-
     
     }
         
@@ -144,13 +142,10 @@ body {
     position: absolute;
     
     }
-
-        
-        
         
  .wrapper{
             
-            margin-top: 467px;
+            margin-top: 0px;
             margin-left: 0px;
         }        
         
@@ -160,6 +155,13 @@ body {
         color: darkslategray;
             
         }
+        
+        
+ .examples ng-scope{
+            
+            position: absolute;
+        }        
+    
 
    
     </style>
@@ -187,49 +189,49 @@ body {
             document.getElementById("infotext2").innerHTML = parseInt(rutanheight)
             
             
-            if (rutanheight==1800 && omgang == 0){
+            if (rutanheight==6003 && omgang == 0){
                 window.d = new Date();
                 omgang = omgang+1;
                 document.getElementById("flick2").style.visibility = "visible";
                 }
             
-            if (rutanheight==1600 && omgang == 1){
+            if (rutanheight==5336 && omgang == 1){
         
                 omgang = omgang+1;
                 document.getElementById("flick3").style.visibility = "visible";
                 }
             
-            if (rutanheight==1400 && omgang == 2){
+            if (rutanheight==4669 && omgang == 2){
                 omgang = omgang+1;
                 document.getElementById("flick4").style.visibility = "visible";
                 }
             
-            if (rutanheight==1200 && omgang == 3){
+            if (rutanheight==4002 && omgang == 3){
                 omgang = omgang+1;
                 document.getElementById("flick5").style.visibility = "visible";
                 }
             
-            if (rutanheight==1000 && omgang == 4){
+            if (rutanheight==3335 && omgang == 4){
                 omgang = omgang+1;
                 document.getElementById("flick6").style.visibility = "visible";
                 }
             
-            if (rutanheight==800 && omgang == 5){
+            if (rutanheight==2668 && omgang == 5){
                 omgang = omgang+1;
                 document.getElementById("flick7").style.visibility = "visible";
                 }
             
-            if (rutanheight==600 && omgang == 6){
+            if (rutanheight==2001 && omgang == 6){
                 omgang = omgang+1;
                 document.getElementById("flick8").style.visibility = "visible";
                 }
             
-            if (rutanheight==400 && omgang == 7){
+            if (rutanheight==1334 && omgang == 7){
                 omgang = omgang+1;
                 document.getElementById("flick9").style.visibility = "visible";
                 }
             
-            if (rutanheight==200 && omgang == 8){
+            if (rutanheight==667 && omgang == 8){
                 omgang = omgang+1;
                 document.getElementById("flick10").style.visibility = "visible";
                 
@@ -271,14 +273,6 @@ body {
 
 <p id="infotext2">hej</p>
     
-<div id="wrapper2">
-        <div id="wrap">
-           <center> <p id=infotext></p>
-            <a href="tests.html" id="link">Return</a>
-               </center>
-    </div>
-</div>    
-    
 <div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
 
   
@@ -303,7 +297,13 @@ body {
 
 <br>
     <br>
-
+<div id="wrapper2">
+        <div id="wrap">
+           <center> <p id=infotext></p>
+            <a href="flickhelup.html" id="link">next</a>
+               </center>
+    </div>
+</div>
 
 
 </div>
