@@ -12,7 +12,7 @@
         *{
     margin: 0;
     padding: 0;
-            overflow: hidden;
+      
 }    
  
 
@@ -123,7 +123,7 @@ body {
         
 #wrapper2 {
     width:100%;
-    margin-top: 0px;
+    margin-top: -929px;
     position: relative;
     display: table;
     visibility: hidden;
@@ -150,7 +150,7 @@ body {
         
  .wrapper{
             
-            margin-top: 567px;
+            margin-top: 0px;
             margin-left: 0px;
         }        
         
@@ -161,7 +161,13 @@ body {
             
         }
 
-   
+        .examples ng-scope{
+            
+             overflow: hidden;
+            position: fixed;
+            
+            
+        }
     </style>
     
     <script>
@@ -190,7 +196,9 @@ body {
             if (rutanheight==900 && omgang == 0){
                 window.d = new Date();
                 omgang = omgang+1;
+                document.getElementById("wrapper2").style.marginTop = "-300px";
                 document.getElementById("flick2").style.visibility = "visible";
+             
                 }
             
             if (rutanheight==800 && omgang == 1){
@@ -279,22 +287,22 @@ body {
     </div>
 </div>    
     
-<div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
+<div class="examples ng-scope" ng-app="angularjs-dragula-example">
 
   
   <div class="parent ng-scope" ng-controller="AnotherExampleCtrl">
     <div class="wrapper">
       <div class="container ng-isolate-scope" dragula="&quot;third-bag&quot;" id="rutan">
-        <div id="flick1" class="grejen"></div>
-        <div id="flick2" class="grejen2"></div>
-        <div id="flick3" class="grejen"></div>
-        <div id="flick4" class="grejen2"></div>
-        <div id="flick5" class="grejen"></div>
-        <div id="flick6" class="grejen2"></div>
-        <div id="flick7" class="grejen"></div>
-        <div id="flick8" class="grejen2"></div>
-        <div id="flick9" class="grejen"></div>
-        <div id="flick10" class="grejen2"></div>
+        <div id="flick10" class="grejen"></div>
+        <div id="flick9" class="grejen2"></div>
+        <div id="flick8" class="grejen"></div>
+        <div id="flick7" class="grejen2"></div>
+        <div id="flick6" class="grejen"></div>
+        <div id="flick5" class="grejen2"></div>
+        <div id="flick4" class="grejen"></div>
+        <div id="flick3" class="grejen2"></div>
+        <div id="flick2" class="grejen"></div>
+        <div id="flick1" class="grejen2"></div>
           
       </div>
     </div>
