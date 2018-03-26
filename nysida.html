@@ -96,6 +96,10 @@ body {
         $(document).ready(function(){
         $("#tva").click(function(){
         $("#tva").hide();
+
+            var start = window.d.getTime();
+            window.tiden1 = new Date().getTime();
+            window.ID4 = ((tiden1 - start)/1000).toFixed(4);
             
         });
         });
@@ -105,12 +109,22 @@ body {
         $("#tre").click(function(){
         $("#tre").hide();
             
+            var start = tiden1;
+            
+            window.tiden2 = new Date().getTime();
+            window.ID3 = ((tiden2 - start)/1000).toFixed(4);
+            
         });
         });
         
          $(document).ready(function(){
         $("#fyr").click(function(){
         $("#fyr").hide();
+            
+            var start = tiden2;
+            
+            window.tiden3 = new Date().getTime();
+            window.ID2 = ((tiden3 - start)/1000).toFixed(4);
             
         });
         });
@@ -119,6 +133,12 @@ body {
         $("#fem").click(function(){
         $("#fem").hide();
             
+            var start = tiden3;
+            
+            window.tiden4 = new Date().getTime();
+            var tiden = new Date().getTime();
+            window.ID1 = ((tiden4 - start)/1000).toFixed(4);
+            
         });
         });
         
@@ -126,14 +146,21 @@ body {
         $("#sex").click(function(){
         $("#sex").hide();
             
-            var forstatiden = window.d.getTime();
-            var andratiden =  new Date().getTime();
-            var mellantiden = andratiden - forstatiden;
-             mellantiden = mellantiden/1000/5;
-            var tiden = mellantiden.toFixed(4);
+            var start = tiden4;
             
-            document.getElementById("tiden").innerHTML = "Time per tap: " + tiden + " seconds";
+            window.tiden5 = new Date().getTime();
+            var tiden = new Date().getTime();
+            window.ID0 = ((tiden5 - start)/1000).toFixed(4);
+            
+            document.getElementById("id4").innerHTML = "ID:4 = " +ID4;
+            document.getElementById("id3").innerHTML = "ID:3 = " +ID3;
+            document.getElementById("id2").innerHTML = "ID:2 = " +ID2;
+            document.getElementById("id1").innerHTML = "ID:1 = " +ID1;
+            document.getElementById("id0").innerHTML = "ID:0 = " +ID0;
+            
             document.getElementById("wrapper").style.display = "inline-block";
+        
+
             
             
         });
@@ -155,7 +182,13 @@ body {
     
     <center>
     <div id="wrapper">
-        <p id="tiden"></p><br>
+        <p id="id4"></p><br>
+        <p id="id3"></p><br>
+        <p id="id2"></p><br>
+        <p id="id1"></p><br>
+        <p id="id0"></p><br>
+    
+        
         <a href="nysida.html" class="link">Retry</a><br><br>
         <a href="" class="link">Next</a>
         
