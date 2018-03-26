@@ -123,23 +123,22 @@ body {
         
 #wrapper2 {
     width:100%;
-    margin-top: 0px;
+    margin-top: 200px;
     position: relative;
-    display: table;
-    visibility: hidden;
+    display: none;
 }
 
 #wrap {
     display: table-cell;
     vertical-align: middle;
     align-content: center;
-    visibility: hidden;
     
     }
         
         
 #infotext2 {
     position: absolute;
+    display: none;
     
     }
         
@@ -251,8 +250,7 @@ body {
                 var tiden = mellantiden.toFixed(4);
             
             document.getElementById("infotext").innerHTML = "Time per flick (right): " + tiden + " seconds"; 
-                document.getElementById("wrapper2").style.visibility = "visible";
-                document.getElementById("wrap").style.visibility = "visible";  
+            document.getElementById("wrapper2").style.display = "inline-table";
           
                 
                 
@@ -272,6 +270,17 @@ body {
 </head><body onload="sitescript();">
 
 <p id="infotext2">hej</p>
+    
+<div id="wrapper2">
+        <div id="wrap">
+           <center> <p id=infotext></p>
+               <br>
+            <a href="flickhelleft.html" id="link">Next</a>
+               <br>
+              <a href="flickhelright.html" id="link">Retry</a> 
+               </center>
+    </div>
+</div>    
     
 <div class="examples ng-scope" ng-app="angularjs-dragula-example" overflow-x:hidden>
 
@@ -297,13 +306,7 @@ body {
 
 <br>
     <br>
-<div id="wrapper2">
-        <div id="wrap">
-           <center> <p id=infotext></p>
-            <a href="flickhelleft.html" id="link">next</a>
-               </center>
-    </div>
-</div>
+
 
 
 </div>

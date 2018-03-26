@@ -123,10 +123,9 @@ body {
         
 #wrapper2 {
     width:100%;
-    margin-top: 0px;
+    margin-top: 200px;
     position: relative;
-    display: table;
-    visibility: hidden;
+    display: none;
     transform: rotate(0deg);
 }
 
@@ -134,7 +133,6 @@ body {
     display: table-cell;
     vertical-align: middle;
     align-content: center;
-    visibility: hidden;
     margin-top: 200px;
 
     
@@ -143,6 +141,7 @@ body {
         
 #infotext2 {
     position: absolute;
+       display: none;
     
     }
 
@@ -250,8 +249,7 @@ body {
                 var tiden = mellantiden.toFixed(4);
             
             document.getElementById("infotext").innerHTML = "Time per flick (up): " + tiden + " seconds"; 
-                document.getElementById("wrapper2").style.visibility = "visible";
-                document.getElementById("wrap").style.visibility = "visible";  
+                document.getElementById("wrapper2").style.display = "inline-table"; 
           
                 
                 
@@ -274,8 +272,10 @@ body {
     
 <div id="wrapper2">
         <div id="wrap">
-           <center> <p id=infotext></p>
+           <center> <p id=infotext></p><br>
             <a href="flickheldown.html" id="link">Next</a>
+               <br>
+               <a href="flickhelup.html" id="link">Retry</a> 
                </center>
     </div>
 </div>    
