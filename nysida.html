@@ -19,24 +19,20 @@
         margin-top: 0px;
     }
     #tva {
-        margin-left: 331px;
-        margin-top: 623px;
+        margin-left: 310px;
+        margin-top: 583px;
     }
     #tre {
-        margin-left: 331px;
-        margin-top: 271px;
+        margin-left: 310px;
+        margin-top: 275;
     }
     #fyr {
-        margin-left: 155px;
-        margin-top: 271px;
+        margin-left: 178px;
+        margin-top: 274px;
     }
     #fem {
-        margin-left: 155px;
-        margin-top: 359px;
-    }
-    #sex {
-        margin-left: 155px;
-        margin-top: 403px;
+        margin-left: 178px;
+        margin-top: 230px;
     }
   
     #wrapper{
@@ -129,6 +125,7 @@ body {
         });
         });
         
+        
          $(document).ready(function(){
         $("#fem").click(function(){
         $("#fem").hide();
@@ -139,24 +136,10 @@ body {
             var tiden = new Date().getTime();
             window.ID1 = ((tiden4 - start)/1000).toFixed(4);
             
-        });
-        });
-        
-         $(document).ready(function(){
-        $("#sex").click(function(){
-        $("#sex").hide();
-            
-            var start = tiden4;
-            
-            window.tiden5 = new Date().getTime();
-            var tiden = new Date().getTime();
-            window.ID0 = ((tiden5 - start)/1000).toFixed(4);
-            
             document.getElementById("id4").innerHTML = "ID:4 = " +ID4;
             document.getElementById("id3").innerHTML = "ID:3 = " +ID3;
             document.getElementById("id2").innerHTML = "ID:2 = " +ID2;
             document.getElementById("id1").innerHTML = "ID:1 = " +ID1;
-            document.getElementById("id0").innerHTML = "ID:0 = " +ID0;
             
             document.getElementById("wrapper").style.display = "inline-block";
         
@@ -178,7 +161,6 @@ body {
     <div class='foo' id="tre">3</div>
     <div class='foo' id="fyr">4</div>
     <div class='foo' id="fem">5</div>
-    <div class='foo' id="sex">6</div>
     
     <center>
     <div id="wrapper">
