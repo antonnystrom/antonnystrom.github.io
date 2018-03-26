@@ -1,0 +1,168 @@
+<html>
+<head>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+    #ett {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    #tva {
+        margin-left: 331px;
+        margin-top: 623px;
+    }
+    #tre {
+        margin-left: 331px;
+        margin-top: 271px;
+    }
+    #fyr {
+        margin-left: 155px;
+        margin-top: 271px;
+    }
+    #fem {
+        margin-left: 155px;
+        margin-top: 359px;
+    }
+    #sex {
+        margin-left: 155px;
+        margin-top: 403px;
+    }
+  
+    #wrapper{
+        
+        display: none;
+        margin-top: 200px;
+        position: absolute;
+        
+    }
+    
+    
+    .link{
+        
+     text-decoration: none;
+         color: darkslategray;
+    }
+    
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      }    
+    
+    .foo {
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  background-color: yellowgreen;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+
+}
+    </style>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+        $("#ett").click(function(){
+        $("#ett").hide();
+        window.d = new Date();
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tva").click(function(){
+        $("#tva").hide();
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#tre").click(function(){
+        $("#tre").hide();
+            
+        });
+        });
+        
+         $(document).ready(function(){
+        $("#fyr").click(function(){
+        $("#fyr").hide();
+            
+        });
+        });
+        
+         $(document).ready(function(){
+        $("#fem").click(function(){
+        $("#fem").hide();
+            
+        });
+        });
+        
+         $(document).ready(function(){
+        $("#sex").click(function(){
+        $("#sex").hide();
+            
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/5;
+            var tiden = mellantiden.toFixed(4);
+            
+            document.getElementById("tiden").innerHTML = "Time per tap: " + tiden + " seconds";
+            document.getElementById("wrapper").style.display = "inline-block";
+            
+            
+        });
+        });
+        
+            
+    </script>
+    
+</head>
+<body>
+    
+    
+    <div class='foo' id="ett">1</div>
+    <div class='foo' id="tva">2</div>
+    <div class='foo' id="tre">3</div>
+    <div class='foo' id="fyr">4</div>
+    <div class='foo' id="fem">5</div>
+    <div class='foo' id="sex">6</div>
+    
+    <center>
+    <div id="wrapper">
+        <p id="tiden"></p><br>
+        <a href="nysida.html" class="link">Retry</a><br><br>
+        <a href="" class="link">Next</a>
+        
+        
+        </div>
+    
+    </center>
+    
+</body>
+</html>

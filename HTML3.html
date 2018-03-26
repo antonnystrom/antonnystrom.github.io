@@ -94,15 +94,13 @@ background-color: #4CAF50; /* Green */
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    
-
-    
+   
     
     <script>
     function random(){
         
         window.antalknapparkvar = 10;
-        window.d = new Date();
+
         $("#knappen").remove();
         $("#info").remove();
 
@@ -174,8 +172,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#ett").hide();
@@ -185,8 +185,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#ett").hide();
-        antalknapparkvar = antalknapparkvar - 1    
-            
+        antalknapparkvar = antalknapparkvar - 1 
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
         }
     });
    
@@ -205,8 +207,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tva").hide();
@@ -215,7 +219,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#tva").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -235,8 +242,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tre").hide();
@@ -245,7 +254,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#tre").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1 
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -266,7 +278,10 @@ document.getElementById("tio").style.visibility = "visible";
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
+            
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#fyr").hide();
@@ -275,7 +290,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#fyr").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1   
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -295,8 +313,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#fem").hide();
@@ -305,7 +325,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#fem").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -325,8 +348,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#sex").hide();
@@ -335,7 +360,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#sex").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1 
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -355,8 +383,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#sju").hide();
@@ -365,7 +395,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#sju").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -385,8 +418,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#att").hide();
@@ -395,7 +430,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#att").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1 
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -415,8 +453,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#nio").hide();
@@ -425,7 +465,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#nio").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1  
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -445,8 +488,10 @@ document.getElementById("tio").style.visibility = "visible";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+             mellantiden = mellantiden/1000/9;
+            var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("tiden1").innerHTML = "Time per tap: " + parseFloat(mellantiden/10000) + " seconds";
+            document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
             
             $("#tio").hide();
@@ -455,7 +500,10 @@ document.getElementById("tio").style.visibility = "visible";
         }
         else {
         $("#tio").hide();
-        antalknapparkvar = antalknapparkvar - 1    
+        antalknapparkvar = antalknapparkvar - 1  
+            if(antalknapparkvar == 9){
+                    window.d = new Date();
+                }
             
         }
     });
@@ -463,14 +511,12 @@ document.getElementById("tio").style.visibility = "visible";
 });
     </script>
     
+    
    
     
 </head>
-    <body>
+    <body onload="random();">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-       <center> <p id="info">Tap times<br>
-            Button size: 44px</p>
-            <button onclick="random()" id="knappen">Start</button></center>
 
 <div class='foo' id=ett></div>
 <div class='foo' id=tva></div>
@@ -483,7 +529,7 @@ document.getElementById("tio").style.visibility = "visible";
 <div class='foo' id=nio></div>
 <div class='foo' id=tio></div>
         
-        <input type="button" onclick="location.href='HTML4.html';" value="Continue" id="nextlink" />
+        <a href=HTML4.html><button id="nextlink">Continue</button></a>
         <p id="tiden2"></p>
         <center><p id="tiden1"></p></center>
 
