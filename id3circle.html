@@ -1,0 +1,335 @@
+<html>
+<head>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+    .foo {
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  background-color: yellowgreen;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+
+}
+    
+    
+      #ett {
+        margin-left: 166px;
+        margin-top: 116px;
+    }
+    #tva {
+        margin-left: 166px;
+        margin-top: 447px;
+    }
+    #tre {
+        margin-left: 232px;
+        margin-top: 130px;
+    }
+    #fyra {
+        margin-left: 95px;
+        margin-top: 432px;
+    }
+    #fem {
+        margin-left: 285px;
+        margin-top: 167px;
+    }
+    
+    #sex {
+        margin-left: 46px;
+        margin-top: 396px;
+    }
+    
+    #sju {
+        margin-left: 321px;
+        margin-top: 224px;
+    }
+    #atta {
+        margin-left: 12px;
+        margin-top: 344px;
+    }
+    #nio {
+        margin-left: 331px;
+        margin-top: 282px;
+    }
+    #tio {
+        margin-left: 0px;
+        margin-top: 282px;
+    }
+    
+     #elva {
+        margin-left: 320px;
+        margin-top: 342px;
+    }
+    #tolv {
+        margin-left: 12px;
+        margin-top: 220px;
+    }
+    
+     #tretton {
+        margin-left: 286px;
+        margin-top: 395px;
+    }
+    #fjorton {
+        margin-left: 46px;
+        margin-top: 167px;
+    }
+    
+     #femton {
+        margin-left: 229px;
+        margin-top: 435px;
+    }
+    #sexton {
+        margin-left: 98;
+        margin-top: 130px;
+    }
+  
+    #wrapper{
+        
+        display: none;
+        margin-top: 200px;
+        position: absolute;
+        
+    }
+    
+    
+    .link{
+        
+     text-decoration: none;
+         color: darkslategray;
+    }
+    
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      }    
+    
+    
+    </style>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+        $("#ett").click(function(){
+        $("#ett").hide();
+        window.d = new Date();
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tva").click(function(){
+        $("#tva").hide();
+
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#tre").click(function(){
+        $("#tre").hide();
+            
+   
+            
+        });
+        });
+        
+         $(document).ready(function(){
+        $("#fyra").click(function(){
+        $("#fyra").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#fem").click(function(){
+        $("#fem").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sex").click(function(){
+        $("#sex").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sju").click(function(){
+        $("#sju").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#atta").click(function(){
+        $("#atta").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#nio").click(function(){
+        $("#nio").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tio").click(function(){
+        $("#tio").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#elva").click(function(){
+        $("#elva").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tolv").click(function(){
+        $("#tolv").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tretton").click(function(){
+        $("#tretton").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#fjorton").click(function(){
+        $("#fjorton").hide();
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#femton").click(function(){
+        $("#femton").hide();
+            
+        
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#sexton").click(function(){
+        $("#sexton").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            var tidenpertap = ((tiden-starttid)/1000/15).toFixed(4);
+            
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID3) = " + tidenpertap;
+            
+            document.getElementById("wrapper").style.display = "inline-block";
+        
+
+            
+            
+        });
+        });
+        
+            
+    </script>
+    
+</head>
+<body>
+    
+    <div class='foo' id="sexton">16</div>
+    <div class='foo' id="femton">15</div>
+    <div class='foo' id="fjorton">14</div>
+    <div class='foo' id="tretton">13</div>
+    <div class='foo' id="tolv">12</div>
+    <div class='foo' id="elva">11</div>
+    <div class='foo' id="tio">10</div>
+    <div class='foo' id="nio">9</div>
+    <div class='foo' id="atta">8</div>
+    <div class='foo' id="sju">7</div>
+    <div class='foo' id="sex">6</div>
+    <div class='foo' id="fem">5</div>
+    <div class='foo' id="fyra">4</div>
+    <div class='foo' id="tre">3</div>
+    <div class='foo' id="tva">2</div>
+    <div class='foo' id="ett">1</div>
+   
+
+    
+    
+    
+    <center>
+    <div id="wrapper">
+        <p id="id4"></p><br>
+        <p id="id3"></p><br>
+        <p id="id2"></p><br>
+        <p id="id1"></p><br>
+    
+        
+        <a href="" class="link">Retry</a><br><br>
+        <a href="tests.html" class="link">Return</a>
+        
+        
+        </div>
+    
+    </center>
+    
+</body>
+</html>
