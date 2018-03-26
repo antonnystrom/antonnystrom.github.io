@@ -19,8 +19,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
   border-radius: 100%;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   background-color: yellowgreen;
         border-style: solid;
         border-color: black;
@@ -34,75 +34,68 @@
     
     
       #ett {
-        margin-left: 166px;
-        margin-top: 116px;
+        margin-left: 161px;
+        margin-top: 181px;
     }
     #tva {
-        margin-left: 166px;
-        margin-top: 447px;
-    }
-    #tre {
-        margin-left: 232px;
-        margin-top: 130px;
-    }
-    #fyra {
-        margin-left: 95px;
+        margin-left: 161px;
         margin-top: 432px;
     }
+    #tre {
+        margin-left: 223px;
+        margin-top: 199px;
+    }
+    #fyra {
+        margin-left: 100px;
+        margin-top: 412px;
+    }
     #fem {
-        margin-left: 285px;
-        margin-top: 167px;
+        margin-left: 269px;
+        margin-top: 244px;
     }
     
     #sex {
-        margin-left: 46px;
-        margin-top: 396px;
+        margin-left: 54px;
+        margin-top: 368px;
     }
     
     #sju {
-        margin-left: 321px;
-        margin-top: 224px;
+        margin-left: 286px;
+        margin-top: 307px;
     }
     #atta {
-        margin-left: 12px;
-        margin-top: 344px;
+        margin-left: 35px;
+        margin-top: 307px;
+
     }
+    
     #nio {
-        margin-left: 331px;
-        margin-top: 282px;
+        margin-left: 269px;
+       margin-top: 368px;
+
     }
+    
     #tio {
-        margin-left: 0px;
-        margin-top: 282px;
+        margin-left: 54px;
+         margin-top: 245px;
+
     }
     
-     #elva {
-        margin-left: 320px;
-        margin-top: 342px;
+    #elva {
+        margin-left: 223px;
+        margin-top: 413px;
+
     }
+    
     #tolv {
-        margin-left: 12px;
-        margin-top: 220px;
+        
+        margin-left: 98px;
+        margin-top: 195px;
+
     }
     
-     #tretton {
-        margin-left: 286px;
-        margin-top: 395px;
-    }
-    #fjorton {
-        margin-left: 46px;
-        margin-top: 167px;
-    }
     
-     #femton {
-        margin-left: 229px;
-        margin-top: 435px;
-    }
-    #sexton {
-        margin-left: 98;
-        margin-top: 130px;
-    }
-  
+    
     #wrapper{
         
         display: none;
@@ -190,8 +183,6 @@ body {
         $("#sju").click(function(){
         $("#sju").hide();
             
-        
-            
         });
         });
         
@@ -231,54 +222,17 @@ body {
         });
         });
         
-        $(document).ready(function(){
+         $(document).ready(function(){
         $("#tolv").click(function(){
         $("#tolv").hide();
-            
-        
-            
-        });
-        });
-        
-        $(document).ready(function(){
-        $("#tretton").click(function(){
-        $("#tretton").hide();
-            
-        
-            
-        });
-        });
-        
-        $(document).ready(function(){
-        $("#fjorton").click(function(){
-        $("#fjorton").hide();
-            
-        
-            
-        });
-        });
-        
-        $(document).ready(function(){
-        $("#femton").click(function(){
-        $("#femton").hide();
-            
-        
-            
-        });
-        });
-        
-        
-         $(document).ready(function(){
-        $("#sexton").click(function(){
-        $("#sexton").hide();
             
             
             var tiden = new Date().getTime();
             var starttid = window.d.getTime();
         
-            var tidenpertap = ((tiden-starttid)/1000/15).toFixed(4);
+            var tidenpertap = ((tiden-starttid)/1000/11).toFixed(4);
             
-            document.getElementById("id1").innerHTML = "Seconds per tap (ID3) = " + tidenpertap;
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID2.5) = " + tidenpertap;
             
             document.getElementById("wrapper").style.display = "inline-block";
         
@@ -294,10 +248,6 @@ body {
 </head>
 <body>
     
-    <div class='foo' id="sexton">16</div>
-    <div class='foo' id="femton">15</div>
-    <div class='foo' id="fjorton">14</div>
-    <div class='foo' id="tretton">13</div>
     <div class='foo' id="tolv">12</div>
     <div class='foo' id="elva">11</div>
     <div class='foo' id="tio">10</div>
@@ -317,15 +267,16 @@ body {
     
     <center>
     <div id="wrapper">
-      
+     
         <p id="id1"></p><br>
     
-        <a href="id2.5circle.html" class="link">Next</a><br><br>
+        
+        
+        <a href="id2circle.html" class="link">Next</a><br><br>
         
         <a href="" class="link">Retry</a><br><br>
         
         <a href="tests.html" class="link">Return</a><br><br>
-        
         
         
         </div>
