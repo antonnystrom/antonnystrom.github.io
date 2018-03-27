@@ -19,56 +19,90 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
   border-radius: 100%;
-  width: 64px;
-  height: 64px;
+  width: 33px;
+  height: 33px;
   background-color: yellowgreen;
         border-style: solid;
         border-color: black;
         border-width: 2px;
         position: absolute;
         text-align: center;
-        font-size: 30px;
+        font-size: 14px;
         color: black;
 
 }
     
     
       #ett {
-        margin-left: 156px;
-        margin-top: 175px;
+        margin-left: 172;
+        margin-top: 152;
     }
     #tva {
-        margin-left: 156px;
-        margin-top: 367px;
+        margin-left: 172;
+        margin-top: 488;
     }
     #tre {
-        margin-left: 222px;
-        margin-top: 202px;
+        margin-left: 237;
+        margin-top: 165;
     }
     #fyra {
-        margin-left: 87px;
-        margin-top: 335px;
+        margin-left: 105;
+        margin-top: 472;
     }
     #fem {
-        margin-left: 252px;
-        margin-top: 271px;
+        margin-left: 286;
+        margin-top: 200;
     }
     
     #sex {
-        margin-left: 60px;
-        margin-top: 271px;
+        margin-left: 45;
+        margin-top: 431;
     }
     
     #sju {
-        margin-left: 222px;
-        margin-top: 335px;
+        margin-left: 327;
+        margin-top: 252;
     }
     #atta {
-        margin-left: 92px;
-        margin-top: 202px;
-
+        margin-left: 14;
+        margin-top: 384;
+    }
+    #nio {
+        margin-left: 341;
+        margin-top: 318;
+    }
+    #tio {
+        margin-left: 1;
+        margin-top: 318;
     }
     
+     #elva {
+        margin-left: 328;
+        margin-top: 384;
+    }
+    #tolv {
+        margin-left: 14;
+        margin-top: 252;
+    }
+    
+     #tretton {
+        margin-left: 285;
+        margin-top: 431;
+    }
+    #fjorton {
+        margin-left: 50;
+        margin-top: 195;
+    }
+    
+     #femton {
+        margin-left: 237;
+        margin-top: 472;
+    }
+    #sexton {
+        margin-left: 108;
+        margin-top: 163;
+    }
+  
     #wrapper{
         
         display: none;
@@ -172,18 +206,99 @@ body {
         });
         });
         
-        
-         $(document).ready(function(){
+        $(document).ready(function(){
         $("#atta").click(function(){
         $("#atta").hide();
+            
+        document.getElementById("nio").style.backgroundColor = "red";
+        document.getElementById("nio").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#nio").click(function(){
+        $("#nio").hide();
+            document.getElementById("tio").style.backgroundColor = "red";
+        document.getElementById("tio").style.color = "white";
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tio").click(function(){
+        $("#tio").hide();
+            document.getElementById("elva").style.backgroundColor = "red";
+        document.getElementById("elva").style.color = "white";
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#elva").click(function(){
+        $("#elva").hide();
+            
+            document.getElementById("tolv").style.backgroundColor = "red";
+        document.getElementById("tolv").style.color = "white";
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tolv").click(function(){
+        $("#tolv").hide();
+            
+        document.getElementById("tretton").style.backgroundColor = "red";
+        document.getElementById("tretton").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tretton").click(function(){
+        $("#tretton").hide();
+            
+        document.getElementById("fjorton").style.backgroundColor = "red";
+        document.getElementById("fjorton").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#fjorton").click(function(){
+        $("#fjorton").hide();
+            
+        document.getElementById("femton").style.backgroundColor = "red";
+        document.getElementById("femton").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#femton").click(function(){
+        $("#femton").hide();
+            
+        document.getElementById("sexton").style.backgroundColor = "red";
+        document.getElementById("sexton").style.color = "white";
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#sexton").click(function(){
+        $("#sexton").hide();
             
             
             var tiden = new Date().getTime();
             var starttid = window.d.getTime();
         
-            var tidenpertap = ((tiden-starttid)/1000/7).toFixed(4);
+            var tidenpertap = ((tiden-starttid)/1000/15).toFixed(4);
             
-            document.getElementById("id1").innerHTML = "Seconds per tap (ID2) = " + tidenpertap;
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID3) = " + tidenpertap;
             
             document.getElementById("wrapper").style.display = "inline-block";
         
@@ -199,7 +314,14 @@ body {
 </head>
 <body>
     
-   
+    <div class='foo' id="sexton">16</div>
+    <div class='foo' id="femton">15</div>
+    <div class='foo' id="fjorton">14</div>
+    <div class='foo' id="tretton">13</div>
+    <div class='foo' id="tolv">12</div>
+    <div class='foo' id="elva">11</div>
+    <div class='foo' id="tio">10</div>
+    <div class='foo' id="nio">9</div>
     <div class='foo' id="atta">8</div>
     <div class='foo' id="sju">7</div>
     <div class='foo' id="sex">6</div>
@@ -215,16 +337,15 @@ body {
     
     <center>
     <div id="wrapper">
-     
+      
         <p id="id1"></p><br>
     
-        
-        
-        <a href="id2circle.html" class="link">Next</a><br><br>
+        <a href="id3circle.html" class="link">Next</a><br><br>
         
         <a href="" class="link">Retry</a><br><br>
         
         <a href="tests.html" class="link">Return</a><br><br>
+        
         
         
         </div>
