@@ -34,14 +34,50 @@
     
     
       #ett {
-        margin-left: 188;
-        margin-top: 302;
+        margin-left: 189;
+        margin-top: 298;
     }
     #tva {
-        margin-left: 124;
-        margin-top: 302;
+        margin-left: 125;
+        margin-top: 298;
 
     }
+    
+    #tre {
+        margin-left: 143;
+        margin-top: 252;
+        display: none;
+    }
+    #fyra {
+        margin-left: 143;
+        margin-top: 316;
+        display: none;
+
+    }
+    
+    #fem {
+        margin-left: 134;
+        margin-top: 275;
+        display: none;
+    }
+    #sex {
+        margin-left: 179;
+        margin-top: 320;
+        display: none;
+
+    }
+    #sju {
+        margin-left: 179;
+        margin-top: 275;
+        display: none;
+    }
+    #atta {
+        margin-left: 134;
+        margin-top: 320;
+        display: none;
+
+    }
+    
     #wrapper{
         
         display: none;
@@ -92,12 +128,124 @@ body {
             var tiden = new Date().getTime();
             var starttid = window.d.getTime();
         
-            var tidenpertap = ((tiden-starttid)/1000/1).toFixed(4);
+            window.tidenpertap1 = ((tiden-starttid)/1000/1);
             
-            document.getElementById("id1").innerHTML = "Seconds per tap (ID1) = " + tidenpertap;
+            setTimeout(function (){
+
+            document.getElementById("tre").style.display = "inline";
+            document.getElementById("fyra").style.display = "inline";
+            }, 500);
+        
+            
+
+            
+            
+        });
+        });
+        
+        
+        $(document).ready(function(){
+        $("#tre").click(function(){
+        $("#tre").hide();
+        window.d = new Date();
+        document.getElementById("fyra").style.backgroundColor = "red";
+        document.getElementById("fyra").style.color = "white";
+            
+        });
+        });
+        
+        
+        
+         $(document).ready(function(){
+        $("#fyra").click(function(){
+        $("#fyra").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            window.tidenpertap2 = ((tiden-starttid)/1000/1);
+            
+            setTimeout(function (){
+
+            document.getElementById("fem").style.display = "inline";
+            document.getElementById("sex").style.display = "inline";
+            }, 500);
+        
+            
+
+            
+            
+        });
+        });
+        
+        
+        
+        
+        $(document).ready(function(){
+        $("#fem").click(function(){
+        $("#fem").hide();
+        window.d = new Date();
+        document.getElementById("sex").style.backgroundColor = "red";
+        document.getElementById("sex").style.color = "white";
+            
+        });
+        });
+        
+        
+        
+         $(document).ready(function(){
+        $("#sex").click(function(){
+        $("#sex").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            window.tidenpertap3 = ((tiden-starttid)/1000/1);
+            
+            setTimeout(function (){
+
+            document.getElementById("sju").style.display = "inline";
+            document.getElementById("atta").style.display = "inline";
+            }, 500);
+        
+            
+
+            
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sju").click(function(){
+        $("#sju").hide();
+        window.d = new Date();
+        document.getElementById("atta").style.backgroundColor = "red";
+        document.getElementById("atta").style.color = "white";
+            
+        });
+        });
+        
+        
+        
+         $(document).ready(function(){
+        $("#atta").click(function(){
+        $("#atta").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            window.tidenpertap4 = ((tiden-starttid)/1000/1);
+            
+            averagetidenpertap = ((tidenpertap1 + tidenpertap2 + tidenpertap3 + tidenpertap4)/4).toFixed(4);
+            
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID1) = " + averagetidenpertap;
             
             document.getElementById("wrapper").style.display = "inline-block";
         
+            
 
             
             
@@ -110,6 +258,12 @@ body {
 </head>
 <body>
     
+    <div class='foo' id="atta">2</div>
+    <div class='foo' id="sju">1</div>
+    <div class='foo' id="sex">2</div>
+    <div class='foo' id="fem">1</div>
+    <div class='foo' id="fyra">2</div>
+    <div class='foo' id="tre">1</div>
     <div class='foo' id="tva">2</div>
     <div class='foo' id="ett">1</div>
    

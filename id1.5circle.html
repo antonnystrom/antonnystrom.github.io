@@ -34,20 +34,41 @@
     
     
       #ett {
-        margin-left: 167;
-        margin-top: 244;
+        margin-left: 160;
+        margin-top: 250;
     }
     #tva {
-        margin-left: 167;
-        margin-top: 361;
+        margin-left: 160;
+        margin-top: 367;
     }
     #tre {
-        margin-left: 225;
-        margin-top: 303;
+        margin-left: 218;
+        margin-top: 309;
     }
     #fyra {
-        margin-left: 108;
-        margin-top: 303;
+        margin-left: 101;
+        margin-top: 309;
+    }
+    
+    #fem {
+        margin-left: 101;
+        margin-top: 248;
+        display: none;
+    }
+    #sex {
+        margin-left: 184;
+        margin-top: 330;
+        display: none;
+    }
+    #sju {
+        margin-left: 184;
+        margin-top: 248;
+        display: none;
+    }
+    #atta {
+        margin-left: 102;
+        margin-top: 330;
+        display: none;
     }
 
     
@@ -123,13 +144,73 @@ body {
             var tiden = new Date().getTime();
             var starttid = window.d.getTime();
         
-            var tidenpertap = ((tiden-starttid)/1000/3).toFixed(4);
+            window.tidenpertap1 = ((tiden-starttid)/1000/3);
             
-            document.getElementById("id1").innerHTML = "Seconds per tap (ID1.5) = " + tidenpertap;
+            setTimeout(function (){
+
+            document.getElementById("fem").style.display = "inline";
+            document.getElementById("sex").style.display = "inline";
+            document.getElementById("sju").style.display = "inline";
+            document.getElementById("atta").style.display = "inline";
+            }, 500);
+        
+
             
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#fem").click(function(){
+        $("#fem").hide();
+        window.d = new Date();
+        document.getElementById("sex").style.backgroundColor = "red";
+        document.getElementById("sex").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sex").click(function(){
+        $("#sex").hide();
+            document.getElementById("sju").style.backgroundColor = "red";
+        document.getElementById("sju").style.color = "white";
+
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#sju").click(function(){
+        $("#sju").hide();
+            document.getElementById("atta").style.backgroundColor = "red";
+        document.getElementById("atta").style.color = "white";
+            
+   
+            
+        });
+        });
+        
+        
+        
+         $(document).ready(function(){
+        $("#atta").click(function(){
+        $("#atta").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            window.tidenpertap2 = ((tiden-starttid)/1000/3);
+            
+            averagetidenpertap = ((tidenpertap1 + tidenpertap2)/2).toFixed(4);
+         
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID1.5) = " + averagetidenpertap;
             document.getElementById("wrapper").style.display = "inline-block";
         
 
+            
             
             
         });
@@ -141,6 +222,10 @@ body {
 </head>
 <body>
     
+    <div class='foo' id="atta">4</div>
+    <div class='foo' id="sju">3</div>
+    <div class='foo' id="sex">2</div>
+    <div class='foo' id="fem">1</div>
    
     <div class='foo' id="fyra">4</div>
     <div class='foo' id="tre">3</div>
@@ -155,9 +240,7 @@ body {
     <div id="wrapper">
      
         <p id="id1"></p><br>
-    
-        
-        
+   
         <a href="id1circle.html" class="link">Next</a><br><br>
         
         <a href="" class="link">Retry</a><br><br>
