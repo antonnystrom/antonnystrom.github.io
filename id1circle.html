@@ -1,0 +1,139 @@
+<html>
+<head>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+    .foo {
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  background-color: yellowgreen;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+
+}
+    
+    
+      #ett {
+        margin-left: 188;
+        margin-top: 302;
+    }
+    #tva {
+        margin-left: 124;
+        margin-top: 302;
+
+    }
+    #wrapper{
+        
+        display: none;
+        margin-top: 200px;
+        position: absolute;
+        
+    }
+    
+    
+    .link{
+        
+     text-decoration: none;
+         color: darkslategray;
+    }
+    
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      }    
+    
+    
+    </style>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+        $("#ett").click(function(){
+        $("#ett").hide();
+        window.d = new Date();
+        document.getElementById("tva").style.backgroundColor = "red";
+        document.getElementById("tva").style.color = "white";
+            
+        });
+        });
+        
+        
+        
+         $(document).ready(function(){
+        $("#tva").click(function(){
+        $("#tva").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            var tidenpertap = ((tiden-starttid)/1000/7).toFixed(4);
+            
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID2) = " + tidenpertap;
+            
+            document.getElementById("wrapper").style.display = "inline-block";
+        
+
+            
+            
+        });
+        });
+        
+            
+    </script>
+    
+</head>
+<body>
+    
+    <div class='foo' id="tva">2</div>
+    <div class='foo' id="ett">1</div>
+   
+
+    
+    
+    
+    <center>
+    <div id="wrapper">
+     
+        <p id="id1"></p><br>
+    
+        
+        
+        <a href="id1circle.html" class="link">Next</a><br><br>
+        
+        <a href="" class="link">Retry</a><br><br>
+        
+        <a href="tests.html" class="link">Return</a><br><br>
+        
+        
+        </div>
+    
+    </center>
+    
+</body>
+</html>
