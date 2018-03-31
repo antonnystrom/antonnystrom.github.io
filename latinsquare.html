@@ -1,0 +1,112 @@
+<html>
+    
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+
+  
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      } 
+    
+    
+ .wrapper {
+    width:100%;
+    height:100%;
+    position: relative;
+    display: table;
+}
+
+.wrap {
+    display: table-cell;
+    vertical-align: middle;
+    align-content: center;
+    
+    }
+    
+#knappen{
+    
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+        border-style: solid;
+        border-color: darkslategrey;
+    border-width: 2px;
+        margin-top: 20px;
+    
+    }
+    
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    function sitescript(){
+        
+       function shuffle(array) {
+    var counter = array.length, temp, index;
+
+    // While there are elements in the array
+    while (counter--) {
+        // Pick a random index
+        index = (Math.random() * counter) | 0;
+
+        // And swap the last element with it
+        temp = array[counter];
+        array[counter] = array[index];
+        array[index] = temp;
+    }
+
+    return array;
+       }
+
+var arr = [1,2,3,4,5,6];
+
+var randoms = shuffle(arr);
+randoms.length = 6; // get 4 random elements
+console.log(randoms);
+document.getElementById("ett").innerHTML = randoms;
+        
+        
+    }
+    </script>
+</head>
+<body onload="sitescript();">
+    
+    <a href="tests.html">Back</a>
+    
+    <div class="wrapper">
+        <div class="wrap">
+            <center>   
+             
+            <p id="ett"></p><br>
+            <p id="tva"></p><br>
+            <p id="tre"></p><br>
+            <p id="fyra"></p><br>
+            <p id="fem"></p><br>
+            <p id="sex"></p><br>
+                
+            </center>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
