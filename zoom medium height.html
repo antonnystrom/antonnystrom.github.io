@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1 initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+    <script src="zepto.js"></script>
+    
+    <style>
+    
+        body, html {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;    
+    font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+    line-height:1.5em;
+            
+}
+
+.wrapper {
+    width:100%;
+    height:100%;
+    position: relative;
+    display: table;
+}
+
+.wrap {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#square {
+    width:100px;
+    height:100px;
+    margin:0 auto;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    border-style: solid;
+        border-color: darkslategray;
+        border-width: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position:relative;
+
+}
+        
+        
+#zoomtarget {
+    width:384px;
+    height:384px;
+    margin-top: 142px; /* 667 pixlar lång är skärmen. ta då (667-storleken på zoomtarget)/2 som margin */
+    background-color: none;
+    border-radius: 0%;
+    border-style: solid;
+        border-color: darkslategray;
+        border-width: 3px;
+        border-style: dashed;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+}        
+
+#infotext {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+}    
+        
+#infotext2 {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1px;
+}          
+        
+    
+    </style>
+    
+  
+    <script>
+        
+        
+        
+    $(document).ready(function(){
+        
+        var omgang = 0;
+        
+        refreshData();
+        
+        function refreshData()
+        {
+            
+        var element = document.getElementById('square');
+        var x = element.clientWidth + 6; //+6 eftersom border är 3
+        var y = element.clientHeight + 6;   //+6 eftersom border är 3
+            
+        var startstorlek = 100;
+        var maxstorlek = 238;
+            
+            
+        sekunder = 1;  // 5 Seconds
+        document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
+           
+        if (x != 100 && omgang == 0) {
+            
+            window.d = new Date();
+            omgang = 1;
+               
+            }
+                
+        if(x == 384 && omgang == 1) {  
+            
+            element.style.backgroundColor = "yellowgreen";
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+            document.getElementById("infotext2").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
+            omgang = 2;
+            
+            }
+
+        if (x==384 && omgang == 2){
+            
+            element.style.backgroundColor = "yellowgreen";
+            
+            }
+            else{
+                
+                element.style.backgroundColor = "whitesmoke";
+                
+               } 
+                
+                
+            
+            
+        setTimeout(refreshData, sekunder);
+        }
+        
+        }) 
+    
+    </script>
+</head>
+
+
+    
+    
+<body>
+    <a href="tests.html">back</a>
+    <p id="infotext"></p>
+    <p id="infotext2"></p>
+    <div class="wrapper">
+        <div id="zoomtarget"></div>
+    <div class="wrap">
+        <div id="square"></div>
+        
+    </div>
+</div>
+   
+
+   
+ 
+<script>
+    
+    var dom = document.body,
+    _width = parseInt($('#square').css('width')),
+    vel = 5.0,
+    min = _width,
+    max = 384,
+    scale;
+
+dom.addEventListener("gesturechange", gestureChange, false);
+dom.addEventListener("gestureend", gestureEnd, false);
+
+function gestureChange(e) {
+
+    e.preventDefault();
+
+    scale = e.scale;
+    var tempWidth = _width * scale;
+
+    if (tempWidth > max) tempWidth = max;
+    if (tempWidth < min) tempWidth = min;
+
+    $('#square').css({
+        'width': tempWidth + 'px',
+        'height': tempWidth + 'px'
+    });
+}
+
+function gestureEnd(e) {
+
+    e.preventDefault();
+    _width = parseInt($('#square').css('width'));
+}
+    
+    
+    </script>    
+    
+</body>
+</html>
