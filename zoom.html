@@ -117,8 +117,15 @@
             
             document.getElementById("infotext2").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             omgang = 2;
+            
+            
+            setTimeout(function (){
+
             document.getElementById("vidare").style.display = "inline";
             element.style.display = "none";
+            }, 500);
+            
+            
             
             }
 
