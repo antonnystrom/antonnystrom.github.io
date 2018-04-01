@@ -56,6 +56,13 @@
         }
         
         
+        #check{
+            position: absolute;
+            display: none;
+            width: 100px;
+            height: 100px;
+        }
+        
 #zoomtarget {
     width:375px;
     height:375px;
@@ -123,7 +130,8 @@
 
             document.getElementById("vidare").style.display = "inline";
             element.style.display = "none";
-            }, 500);
+            
+            }, 1000);
             
             
             
@@ -132,6 +140,7 @@
         if (x==375 && omgang == 2){
             
             element.style.backgroundColor = "yellowgreen";
+            document.getElementById("check").style.display = "inline";
             
             }
             else{
@@ -161,6 +170,7 @@
         <div id="zoomtarget"></div>
     <div class="wrap">
         <div id="square"></div>
+        <img src="check.png" id="check">
         
     </div>
     <div id="vidare">
