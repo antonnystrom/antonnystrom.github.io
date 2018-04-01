@@ -127,10 +127,14 @@
             omgang = 2;
             
             
+             setTimeout(function (){
+
+            document.getElementById("square").style.display = "none";
+             document.getElementById("vidare").style.display = "inline";
+            }, 1200);
             
-            document.getElementById("vidare").style.display = "inline";
-            element.clientHeight = 667;
-            element.clientWidth = 375;
+            
+           
             
 
             
@@ -169,9 +173,8 @@
     <div class="wrapper">
         <div id="zoomtarget"></div>
     <div class="wrap">
-        <div id="square">
-            
-            <center><div id="vidare">
+        
+        <center><div id="vidare">
             <p id="infotext"></p>
         <p id="infotext2"></p>
         <a href="" class="link">Retry</a><br>
@@ -180,6 +183,10 @@
                 
         </div>
         </center>
+        
+        <div id="square">
+            
+            
         </div>
         
         
