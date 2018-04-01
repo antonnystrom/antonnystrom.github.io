@@ -121,8 +121,9 @@
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = ((mellantiden/1000).toFixed(4))
             
-            document.getElementById("infotext2").innerHTML = "Time to resize square 1: " + parseFloat(mellantiden/1000) + " seconds";
+            document.getElementById("infotext2").innerHTML = "Time to resize square 1: " + mellantiden + " seconds";
             omgang = 2;
             
             
