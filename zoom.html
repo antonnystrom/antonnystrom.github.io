@@ -49,6 +49,10 @@
 
 }
         
+        #vidare{
+            display: none;
+        }
+        
         
 #zoomtarget {
     width:375px;
@@ -64,6 +68,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     position: absolute;
+    display: none;
 }        
 
 #infotext {
@@ -122,6 +127,7 @@
             
             document.getElementById("infotext2").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
             omgang = 2;
+            document.getElementById("vidare").style.display = "inline";
             
             }
 
@@ -158,7 +164,11 @@
         <div id="zoomtarget"></div>
     <div class="wrap">
         <div id="square"></div>
-        
+        <div id="vidare">
+        <a href="" class="link">Retry</a><br><br>
+        <a href="zoommax.html" class="link">Next</a><br>
+        <a href="tests.html" class="link">Return</a>
+        </div>
     </div>
 </div>
    

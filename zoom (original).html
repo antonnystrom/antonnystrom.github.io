@@ -51,9 +51,9 @@
         
         
 #zoomtarget {
-    width:238px;
-    height:238px;
-    margin-top: 430px; /* 667 pixlar lång är skärmen. ta då (667-storleken på zoomtarget)/2 som margin */
+    width:375px;
+    height:375px;
+    margin-top: 146px; /* 667 pixlar lång är skärmen. ta då (667-storleken på zoomtarget)/2 som margin */
     background-color: none;
     border-radius: 0%;
     border-style: solid;
@@ -64,7 +64,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     position: absolute;
-    display: none;
 }        
 
 #infotext {
@@ -101,11 +100,11 @@
         var y = element.clientHeight + 6;   //+6 eftersom border är 3
             
         var startstorlek = 100;
-        var maxstorlek = 238;
+        var maxstorlek = 375;
             
             
         sekunder = 1;  // 5 Seconds
-        document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
+        document.getElementById("infotext").innerHTML = "square size: updated" + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0) {
             
@@ -114,7 +113,7 @@
                
             }
                 
-        if(x == 238 && omgang == 1) {  
+        if(x == 375 && omgang == 1) {  
             
             element.style.backgroundColor = "yellowgreen";
             var forstatiden = window.d.getTime();
@@ -126,7 +125,7 @@
             
             }
 
-        if (x==238 && omgang == 2){
+        if (x==375 && omgang == 2){
             
             element.style.backgroundColor = "yellowgreen";
             
@@ -172,7 +171,7 @@
     _width = parseInt($('#square').css('width')),
     vel = 5.0,
     min = _width,
-    max = 238,
+    max = 375,
     scale;
 
 dom.addEventListener("gesturechange", gestureChange, false);
