@@ -56,12 +56,6 @@
         }
         
         
-        #check{
-            position: absolute;
-            display: none;
-            width: 100px;
-            height: 100px;
-        }
         
 #zoomtarget {
     width:375px;
@@ -126,13 +120,10 @@
             omgang = 2;
             
             
-            setTimeout(function (){
-
-            document.getElementById("vidare").style.display = "inline";
-            element.style.display = "none";
-            document.getElementById("check").style.display = "none";  
             
-            }, 1000);
+            document.getElementById("vidare").style.display = "inline";
+            
+
             
             
             
@@ -141,7 +132,6 @@
         if (x==375 && omgang == 2){
             
             element.style.backgroundColor = "yellowgreen";
-            document.getElementById("check").style.display = "inline";
             
             }
             else{
@@ -170,17 +160,22 @@
     <div class="wrapper">
         <div id="zoomtarget"></div>
     <div class="wrap">
-        <div id="square"><img src="check.png" id="check"></div>
-        
-        
-    </div>
-    <div id="vidare">
+        <div id="square">
+            
+            <center><div id="vidare">
             <p id="infotext"></p>
         <p id="infotext2"></p>
         <a href="" class="link">Retry</a><br>
         <a href="zoommax.html" class="link">Next</a><br>
         <a href="tests.html" class="link">Return</a>
+                
         </div>
+        </center>
+        </div>
+        
+        
+    </div>
+    
 </div>
    
     
