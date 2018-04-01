@@ -32,6 +32,12 @@
     vertical-align: middle;
     text-align: center;
 }
+        
+.link{
+        
+     text-decoration: none;
+         color: darkslategray;
+    }
 
 #square {
     width:100px;
@@ -49,11 +55,18 @@
 
 }
         
+        #vidare{
+            display: none;
+            margin-top: 0px;
+            position: relative;
+        }
+        
+        
         
 #zoomtarget {
     width:375px;
-    height:667px;
-    margin-top: 0px; /* 667 pixlar lång är skärmen. ta då (667-storleken på zoomtarget)/2 som margin */
+    height:375px;
+    margin-top: 146px; /* 667 pixlar lång är skärmen. ta då (667-storleken på zoomtarget)/2 som margin */
     background-color: none;
     border-radius: 0%;
     border-style: solid;
@@ -65,20 +78,7 @@
     -webkit-box-sizing: border-box;
     position: absolute;
     display: none;
-}        
-
-#infotext {
-    position: absolute;
-    margin-top: 1px;
-    margin-left: 1px;
-}    
-        
-#infotext2 {
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 1px;
-    z-index: 100;
-}          
+}                 
         
     
     </style>
@@ -102,11 +102,11 @@
         var y = element.clientHeight + 6;   //+6 eftersom border är 3
             
         var startstorlek = 100;
-        var maxstorlek = 667;
+        var maxstorlek = 375;
             
             
         sekunder = 1;  // 5 Seconds
-        //document.getElementById("infotext").innerHTML = "square size: " + parseInt(x) + "x"+ parseInt (y);
+        //document.getElementById("infotext").innerHTML = "square size: updated" + parseInt(x) + "x"+ parseInt (y);
            
         if (x != 100 && omgang == 0) {
             
@@ -121,9 +121,18 @@
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = ((mellantiden/1000).toFixed(4))
             
-            document.getElementById("infotext2").innerHTML = "time to resize: " + parseFloat(mellantiden/1000) + " seconds";
+            document.getElementById("infotext2").innerHTML = "Time spread 1: " + mellantiden + " seconds";
             omgang = 2;
+            
+            
+            
+            document.getElementById("vidare").style.display = "inline";
+            
+
+            
+            
             
             }
 
@@ -154,19 +163,29 @@
     
 <body>
 
-    <p id="infotext"></p>
-    <p id="infotext2"></p>
     
     <div class="wrapper">
         <div id="zoomtarget"></div>
     <div class="wrap">
-        <div id="square"></div>
+        <div id="square">
+            
+            <center><div id="vidare">
+            <p id="infotext"></p>
+        <p id="infotext2"></p>
+        <a href="" class="link">Retry</a><br>
+        <a href="zoom%20medium%20width.html" class="link">Next</a><br>
+        <a href="tests.html" class="link">Return</a>
+                
+        </div>
+        </center>
+        </div>
+        
         
     </div>
-</div>
     
-
+</div>
    
+    
 
    
  
