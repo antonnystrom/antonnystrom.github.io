@@ -88,7 +88,17 @@ background-color: #4CAF50; /* Green */
     position:absolute; left:0; top:0; right:0; bottom:0; margin:auto;
     visibility: hidden;
     
-}    
+}   
+    
+#link{
+        
+            text-decoration: none;
+        color: darkslategray;
+            display: none;
+    height: 0px;
+        position:absolute; left:0; top:0; right:0; bottom:-120; margin:auto;
+        
+    }
     
 </style>
     
@@ -177,7 +187,8 @@ document.getElementById("tio").style.visibility = "visible";
             var tiden = mellantiden.toFixed(4);
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
-            document.getElementById("nextlink").style.visibility = "visible"
+            document.getElementById("nextlink").style.visibility = "visible";
+            document.getElementById("link").style.display = "inline";
             
             $("#ett").hide();
         
@@ -214,6 +225,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
             $("#tva").hide();
             
@@ -250,6 +262,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
             $("#tre").hide();
             
@@ -287,6 +300,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
             $("#fyr").hide();
             
@@ -323,6 +337,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
             $("#fem").hide();
             
@@ -359,6 +374,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+               document.getElementById("link").style.display = "inline";
             
             $("#sex").hide();
             
@@ -395,6 +411,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+               document.getElementById("link").style.display = "inline";
             
             $("#sju").hide();
             
@@ -431,6 +448,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+               document.getElementById("link").style.display = "inline";
             
             $("#att").hide();
             
@@ -467,6 +485,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+               document.getElementById("link").style.display = "inline";
             
             $("#nio").hide();
             
@@ -503,6 +522,7 @@ document.getElementById("tio").style.visibility = "visible";
             
             document.getElementById("tiden1").innerHTML = "Time per tap: " + tiden + " seconds";
             document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
             $("#tio").hide();
             
@@ -540,6 +560,7 @@ document.getElementById("tio").style.visibility = "visible";
 <div class='foo' id=ett></div>
         
         <a href=tests.html><button id="nextlink">Return</button></a>
+       <center> <a href="" id="link">Retry</a></center>
         <p id="tiden2"></p>
         <center><p id="tiden1"></p></center>
 
