@@ -32,7 +32,7 @@
         var y = position.top;
  
 
-        if(y!=122 || x!=167){
+        if(y!=129 || x!=173){
             if (omgang == 0){
             window.d = new Date();
             omgang = 1;
@@ -48,9 +48,10 @@
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
+            mellantiden = ((mellantiden/1000).toFixed(4))
             
               document.getElementById("wrapper").style.display = "table";
-             document.getElementById("timedrag").innerHTML = "Time for drag: " + parseFloat(mellantiden/1000) + " seconds";
+             document.getElementById("timedrag").innerHTML = "Time for drag: " + mellantiden + " seconds";
                 omgang = 2;
          
     }
@@ -84,10 +85,10 @@
 }    
 
 #ruta{
-       height: 44px;
-    width: 44px;
-    margin-left: 167px;
-    margin-top: 122px;
+       height: 30px;
+    width: 30px;
+    margin-left: 173px;
+    margin-top: 129px;
     position: absolute;
     background-color: whitesmoke;
     border-radius: 0%;
