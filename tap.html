@@ -22,6 +22,7 @@ body {
         font-family: 'Lato', sans-serif;
         font-size: 24px;
         color: darkslategray;
+    text-decoration: none;
       } 
     
     
@@ -52,6 +53,32 @@ body {
     
     }
     
+#nextlink{
+        background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    height: 100px;
+    width: 200px;
+    display: none;
+
+    
+    
+}  
+    
+     #link{
+        
+            text-decoration: none;
+        color: darkslategray;
+         display: none;
+            
+        
+    }
+    
     </style>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -77,6 +104,11 @@ body {
             var tiden = mellantiden.toFixed(4);
             
             document.getElementById("infotext").innerHTML = "Average tap time: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
+            
+            document.getElementById("knappen").style.display = "none";
+            document.getElementById("nextlink").style.display = "inline";
+            document.getElementById("link").style.display = "inline";
+            
             
        
         }
@@ -111,14 +143,14 @@ body {
 </head>
 <body onload="sitescript();">
     
-    <a href="tests.html">back</a>
-    
     <div class="wrapper">
         <div class="wrap">
             <center>   
              
              <p id="infotext">hej</p>
              <div id="knappen"></div>
+            <br><a href=""><button id="nextlink">Again</button></a><br>    <br>
+                <a href="tests.html" id="link">Return</a>
                 
             </center>
         </div>
