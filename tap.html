@@ -90,7 +90,7 @@ body {
     $("#knappen").click(function(){
         
         
-        if(omgang==19){
+        if(omgang==9){
             
             omgang = omgang + 1;
             
@@ -99,17 +99,16 @@ body {
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
-            mellantiden = mellantiden/1000/20
+            mellantiden = mellantiden/1000/9
             var tiden = mellantiden.toFixed(4);
             
-            document.getElementById("knappen").style.display = "none";
-            document.getElementById("infotext").style.display = "none";
+            document.getElementById("knappen").style.visibility = "hidden";
+            document.getElementById("infotext").innerHTML = "Circle tapped: " + parseInt(omgang) + " times";
             
             setTimeout(function (){
 
-            document.getElementById("infotext").style.display = "inline";
             document.getElementById("infotext").innerHTML = "Average tap time: " + tiden + " seconds"; //delat i 21 eftersom man trycker 20 gånger
-            
+            document.getElementById("knappen").style.display = "none";
             
             document.getElementById("nextlink").style.display = "inline";
             document.getElementById("link").style.display = "inline";
@@ -122,7 +121,7 @@ body {
         }
         
         
-        if(omgang >0 && omgang<20){
+        if(omgang >0 && omgang<10){
         
         omgang = omgang + 1;
         document.getElementById("infotext").innerHTML = "Circle tapped: " + parseInt(omgang) + " times";
@@ -157,7 +156,7 @@ body {
              
              <p id="infotext">hej</p>
              <div id="knappen"></div>
-           <br> <br><a href="tests.html"><button id="nextlink">Return</button></a><br>    <br>
+            <br><a href="tests.html"><button id="nextlink">Return</button></a><br>    <br>
                 <a href="" id="link">Again</a>
                 
             </center>
