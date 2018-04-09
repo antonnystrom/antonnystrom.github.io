@@ -1,0 +1,146 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        
+        
+        var omgang = 0;
+        
+        refreshData();
+        
+        function refreshData()
+        {
+            
+        
+        sekunder = 1;  // 5 Seconds
+
+        if (omgang == 2){
+            //document.getElementById("ruta").style.backgroundColor = "yellowgreen";
+                }    
+            
+            
+        var element = document.getElementById('ruta');
+        var position = element.getBoundingClientRect();
+        var x = position.left;
+        var y = position.top;
+            
+        document.getElementById("xcoords").innerHTML = "X-coords " + x; 
+        document.getElementById("ycoords").innerHTML = "Y-coords " + y;  
+
+        if(y!=207 || x!=178){
+            if (omgang == 0){
+            window.d = new Date();
+            omgang = 1;
+                }
+                
+           }     
+            
+        if(y>607 && y<667 && x>158 && x<218){   
+            if (omgang == 1){
+            //document.getElementById("ruta").style.backgroundColor = "yellowgreen";
+            document.getElementById("target").style.backgroundColor = "yellowgreen";
+            
+            var forstatiden = window.d.getTime();
+            var andratiden =  new Date().getTime();
+            var mellantiden = andratiden - forstatiden;
+            
+             document.getElementById("timedrag").innerHTML = "Time for drag: " + parseFloat(mellantiden/1000) + " seconds";
+                omgang = 2;
+    }
+            
+            
+           }
+        if(y<607 || y>667 || x<158 || x>218){   
+            //document.getElementById("ruta").style.backgroundColor = "whitesmoke";
+            document.getElementById("target").style.backgroundColor = "whitesmoke";
+            }
+            
+        setTimeout(refreshData, sekunder);
+        }
+        
+        
+    }) 
+        
+        
+        
+        
+    </script>
+    
+    
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+
+#ruta{
+       height: 20px;
+    width: 20px;
+    margin-left: 178px;
+    margin-top: 207px;
+    position: absolute;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    border-style: solid;
+        border-color: darkslategray;
+        border-width: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    
+    } 
+    
+#target{
+       height: 60px;
+    width: 60px;
+    background-color: none;
+    margin-left: 158;
+    margin-top: 607px;
+    position: absolute;
+    border-style: dashed;
+    border-color: darkslategray;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 4%;
+
+    
+    }
+    
+    #link{
+        
+        position: absolute;
+    }
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      }   
+    
+</style>
+
+</head>
+<body>
+<a href="tests.html" id="link">back</a>
+ <div class="draggable" id="ruta"></div>
+<div id ="target"></div>
+    <p id="xcoords"></p>
+    <p id="ycoords"></p>
+    <p id="timedrag"></p>
+    <p id="infotext2"></p>
+    <p id="datavalue"></p>
+<script type="text/javascript" src="draggin.min.js"></script>    
+</body>
+</html>
