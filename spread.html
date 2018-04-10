@@ -40,8 +40,8 @@
     }
 
 #square {
-    width:60px;
-    height:60px;
+    width:80px;
+    height:80px;
     margin:0 auto;
     background-color: whitesmoke;
     border-radius: 0%;
@@ -130,7 +130,7 @@
         sekunder = 1;  // 5 Seconds
         //document.getElementById("infotext").innerHTML = "square size: updated" + parseInt(x) + "x"+ parseInt (y);
            
-        if (x != 60 && omgang == 0) {
+        if (x != 80 && omgang == 0) {
             
             window.d = new Date();
             omgang = 1;
@@ -139,7 +139,7 @@
                 
         if(x == 375 && omgang == 1) {  
             
-            element.style.backgroundColor = "yellowgreen";
+            element.style.backgroundColor = "yellow";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
@@ -166,7 +166,7 @@
 
         if (x==375 && omgang == 2){
             
-            element.style.backgroundColor = "yellowgreen";
+            element.style.backgroundColor = "yellow";
             
             }
             else{
