@@ -139,7 +139,7 @@
                 
         if(x == 60 && omgang == 1) {  
             
-            element.style.backgroundColor = "yellowgreen";
+            element.style.backgroundColor = "red";
             var forstatiden = window.d.getTime();
             var andratiden =  new Date().getTime();
             var mellantiden = andratiden - forstatiden;
@@ -166,7 +166,7 @@
 
         if (x==60 && omgang == 2){
             
-            element.style.backgroundColor = "yellowgreen";
+            element.style.backgroundColor = "red";
             
             }
             else{
@@ -223,7 +223,7 @@
     
     var dom = document.body,
     _width = parseInt($('#square').css('width')),
-    vel = 1.0,
+    vel = 10.0,
     min = 60,
     max = _width,
     scale;
