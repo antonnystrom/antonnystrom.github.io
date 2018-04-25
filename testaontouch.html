@@ -15,10 +15,22 @@
     padding: 0;
 }    
  
-    #grejen{
-        width: 100px;
-        height: 100px;
+    #grejen1{
+        width: 50px;
+        height: 50px;
         background-color: yellow;
+        
+    }
+    #grejen2{
+        width: 50px;
+        height: 50px;
+        background-color: darkred;
+        
+    }
+    #grejen3{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
         
     }
 
@@ -29,16 +41,71 @@
     
 function sitescript(){    
     
-    document.getElementById("grejen").addEventListener("touchstart", touchHandler, false);
+    
+    $(document).ready(function(){
+        $("#grejen1").click(function(){
+        $("#grejen1").hide();
+       
+        window.slapp1 = new Date();
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#grejen2").click(function(){
+        $("#grejen2").hide();
+            
+        window.slapp2 = new Date();
+            
+        });
+        });
+    
+    $(document).ready(function(){
+        $("#grejen3").click(function(){
+        $("#grejen3").hide();
+            
 
+            
+        });
+        });
+    
+    
+    document.getElementById("grejen2").addEventListener("touchstart", touchHandler2, false);
+    document.getElementById("grejen3").addEventListener("touchstart", touchHandler3, false);
 
-function touchHandler(e) {
+function touchHandler2(e) {
   if (e.type == "touchstart") {
        
-     document.getElementById("info").innerHTML = "touched!"; 
+     document.getElementById("info").innerHTML = "grejen 2 touched!"; 
+      
+      var tiden = new Date().getTime();
+      var touch2 = window.slapp1.getTime();
+      
+      var tidgrej2 = tiden-starttid;
+      document.getElementById("forsta").innerHTML = "forsta tiden: " + tidgrej2; 
+      
 }
 }
+    
+function touchHandler3(e) {
+  if (e.type == "touchstart") {
+       
+     document.getElementById("info").innerHTML = "grejen 3 touched!"; 
+      
+      var tiden = new Date().getTime();
+      var touch3 = window.slapp1.getTime();
+      
+      var tidgrej3 = tiden-starttid;
+      
+      document.getElementById("forsta").innerHTML = "andra tiden: " + tidgrej3;
+      
+}
+}    
+    
     }
+    
+
+    
     </script>
    
     
@@ -48,9 +115,13 @@ function touchHandler(e) {
 </head>
     <body onload="sitescript();">
     
-<div id="grejen"></div>
+<div id="grejen1"></div>
+ <div id="grejen2"></div>
+        <div id="grejen3"></div>
         
 <p id="info"></p>
+ <p id="forsta"></p>
+        <p id="andra"></p>
         
     </body>
 </html>
