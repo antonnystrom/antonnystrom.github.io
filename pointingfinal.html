@@ -117,6 +117,38 @@
     }
     
     
+    #nextlink{
+        background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    height: 100px;
+    width: 200px;
+    position:absolute; left:0; top:0; right:0; bottom:0; margin:auto;
+    visibility: hidden;
+    
+} 
+    
+    #link{
+        
+            text-decoration: none;
+        color: darkslategray;
+            display: none;
+    height: 0px;
+        position:absolute; left:0; top:0; right:0; bottom:-120; margin:auto;
+        
+    }
+    
+    #id1{
+        height: 0px;
+    position:absolute; left:0; top:0; right:0; bottom:250; margin:auto;
+    
+}
+    
     
 body {
         font-family: 'Lato', sans-serif;
@@ -236,9 +268,10 @@ body {
         
             var tidenpertap = ((window.totaltid)/1000/7).toFixed(4);
             
+            document.getElementById("nextlink").style.visibility = "visible"
+             document.getElementById("link").style.display = "inline";
             
-            
-            document.getElementById("id1").innerHTML = "Seconds = " + tidenpertap;
+            document.getElementById("id1").innerHTML = "Average point time: " + tidenpertap + " seconds";
             
             document.getElementById("wrapper").style.display = "inline-block";
         
@@ -410,23 +443,13 @@ function touchHandler8(e) {
     <p id="andra">andra</p>
     <p id="totaltid">totaltid</p>
     
-    <center>
-    <div id="wrapper">
-     
-        <p id="id1"></p><br>
     
-        
-        
-        <a href="id1.5circle.html" class="link">Next</a><br><br>
-        
-        <a href="" class="link">Retry</a><br><br>
-        
-        <a href="tests.html" class="link">Return</a><br><br>
-        
-        
-        </div>
     
-    </center>
+    <a href=""><button id="nextlink">Again</button></a>
+       <center> <a href=tests.html id="link">Return</a></center>
+        <p id="tiden2"></p>
+        <center><p id="id1"></p></center>
+    
     
 </body>
 </html>
