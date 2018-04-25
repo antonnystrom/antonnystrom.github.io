@@ -202,7 +202,9 @@ body {
             
             window.slapp8 = new Date();
         
-            var tidenpertap = ((tiden-starttid)/1000/7).toFixed(4);
+            var tidenpertap = ((window.totaltid)/1000/7).toFixed(4);
+            
+            
             
             document.getElementById("id1").innerHTML = "Seconds per tap (ID2) = " + tidenpertap;
             
