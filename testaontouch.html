@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+    #grejen{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        
+    }
+
+</style>
+    
+    
+<script>
+    
+function sitescript(){    
+    
+    document.getElementById("grejen").addEventListener("touchstart", touchHandler, false);
+    document.getElementById("grejen").addEventListener("touchmove", touchHandler, false);
+    document.getElementById("grejen").addEventListener("touchend", touchHandler, false);
+
+function touchHandler(e) {
+  if (e.type == "touchstart") {
+      
+    document.getElementById("tiden1").innerHTML = "you touched";  
+      
+  } else if (e.type == "touchmove") {
+    alert("You moved your finger!");
+  } else if (e.type == "touchend" || e.type == "touchcancel") {
+    alert("You removed your finger from the screen!");
+  }
+}
+}
+    </script>
+   
+    
+    
+   
+    
+</head>
+    <body onload="sitescript();">
+    
+<div id="grejen"></div>
+        
+<p id="info">hej</p>
+        
+    </body>
+</html>

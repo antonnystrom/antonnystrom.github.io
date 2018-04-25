@@ -1,0 +1,235 @@
+<html>
+<head>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    
+<style>
+   
+
+*{
+    margin: 0;
+    padding: 0;
+}    
+ 
+    .foo {
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  background-color: yellowgreen;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+
+}
+    
+    
+      #ett {
+        margin-left: 156px;
+        margin-top: 175px;
+    }
+    #tva {
+        margin-left: 156px;
+        margin-top: 367px;
+    }
+    #tre {
+        margin-left: 222px;
+        margin-top: 202px;
+    }
+    #fyra {
+        margin-left: 87px;
+        margin-top: 335px;
+    }
+    #fem {
+        margin-left: 252px;
+        margin-top: 271px;
+    }
+    
+    #sex {
+        margin-left: 60px;
+        margin-top: 271px;
+    }
+    
+    #sju {
+        margin-left: 222px;
+        margin-top: 335px;
+    }
+    #atta {
+        margin-left: 92px;
+        margin-top: 202px;
+
+    }
+    
+    #wrapper{
+        
+        display: none;
+        margin-top: 200px;
+        position: absolute;
+        
+    }
+    
+    
+    .link{
+        
+     text-decoration: none;
+         color: darkslategray;
+    }
+    
+    
+    
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: darkslategray;
+      }    
+    
+    
+    </style>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+        $("#ett").click(function(){
+        $("#ett").hide();
+        window.d = new Date();
+        document.getElementById("tva").style.backgroundColor = "red";
+        document.getElementById("tva").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#tva").click(function(){
+        $("#tva").hide();
+            document.getElementById("tre").style.backgroundColor = "red";
+        document.getElementById("tre").style.color = "white";
+
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#tre").click(function(){
+        $("#tre").hide();
+            document.getElementById("fyra").style.backgroundColor = "red";
+        document.getElementById("fyra").style.color = "white";
+            
+   
+            
+        });
+        });
+        
+         $(document).ready(function(){
+        $("#fyra").click(function(){
+        $("#fyra").hide();
+            document.getElementById("fem").style.backgroundColor = "red";
+        document.getElementById("fem").style.color = "white";
+            
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#fem").click(function(){
+        $("#fem").hide();
+            
+        document.getElementById("sex").style.backgroundColor = "red";
+        document.getElementById("sex").style.color = "white";
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sex").click(function(){
+        $("#sex").hide();
+            document.getElementById("sju").style.backgroundColor = "red";
+        document.getElementById("sju").style.color = "white";
+        
+            
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#sju").click(function(){
+        $("#sju").hide();
+            
+        document.getElementById("atta").style.backgroundColor = "red";
+        document.getElementById("atta").style.color = "white";
+            
+        });
+        });
+        
+        
+         $(document).ready(function(){
+        $("#atta").click(function(){
+        $("#atta").hide();
+            
+            
+            var tiden = new Date().getTime();
+            var starttid = window.d.getTime();
+        
+            var tidenpertap = ((tiden-starttid)/1000/7).toFixed(4);
+            
+            document.getElementById("id1").innerHTML = "Seconds per tap (ID2) = " + tidenpertap;
+            
+            document.getElementById("wrapper").style.display = "inline-block";
+        
+
+            
+            
+        });
+        });
+        
+            
+    </script>
+    
+</head>
+<body>
+    
+   
+    <div class='foo' id="atta">8</div>
+    <div class='foo' id="sju">7</div>
+    <div class='foo' id="sex">6</div>
+    <div class='foo' id="fem">5</div>
+    <div class='foo' id="fyra">4</div>
+    <div class='foo' id="tre">3</div>
+    <div class='foo' id="tva">2</div>
+    <div class='foo' id="ett">1</div>
+   
+
+    
+    
+    
+    <center>
+    <div id="wrapper">
+     
+        <p id="id1"></p><br>
+    
+        
+        
+        <a href="id1.5circle.html" class="link">Next</a><br><br>
+        
+        <a href="" class="link">Retry</a><br><br>
+        
+        <a href="tests.html" class="link">Return</a><br><br>
+        
+        
+        </div>
+    
+    </center>
+    
+</body>
+</html>
