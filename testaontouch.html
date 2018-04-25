@@ -103,6 +103,11 @@ function touchHandler3(e) {
       window.totaltid = window.totaltid + tidgrej3;
       
       document.getElementById("totaltid").innerHTML = "total tid: " + totaltid;
+      
+      var totaltidutantouch = tiden - window.slapp1;
+      
+    document.getElementById("totaltidutantouch").innerHTML = "total tid utan touch: " + totaltidutantouch;
+
 }
 }    
     
@@ -127,6 +132,7 @@ function touchHandler3(e) {
  <p id="forsta"></p>
         <p id="andra"></p>
         <p id="totaltid"></p>
+        <p id="totaltidutantouch"></p>
         
     </body>
 </html>
