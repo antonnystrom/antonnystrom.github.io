@@ -103,7 +103,7 @@ body {
         $("#ett").click(function(){
         $("#ett").hide();
         window.d = new Date();
-            
+  
         window.slapp1 = new Date();    
             
         document.getElementById("tva").style.backgroundColor = "red";
@@ -225,8 +225,8 @@ body {
     
 function sitescript(){  
     
-    document.getElementById("ett").addEventListener("touchstart", touchHandler2, false);
-    document.getElementById("tva").addEventListener("touchstart", touchHandler3, false);
+    document.getElementById("tva").addEventListener("touchstart", touchHandler2, false);
+    document.getElementById("tre").addEventListener("touchstart", touchHandler3, false);
 
 
 function touchHandler2(e) {
@@ -280,7 +280,7 @@ function touchHandler3(e) {
     <div class='foo' id="ett">1</div>
    
 
-    <p id="info">info :</p>
+    <p id="info">info..</p>
     <p id="forsta">forsta</p>
     <p id="andra">andra</p>
     <p id="totaltid">totaltid</p>
