@@ -84,7 +84,7 @@ function touchHandler2(e) {
       var tidgrej2 = tiden-slapp1;
       document.getElementById("forsta").innerHTML = "forsta tiden: " + tidgrej2;
       window.totaltid = tidgrej2;
-      document.getElementById("totaltid").innerHTML = totaltid;
+      document.getElementById("totaltid").innerHTML = "total tid: " totaltid;
 }
 }
     
@@ -100,9 +100,9 @@ function touchHandler3(e) {
       
       document.getElementById("andra").innerHTML = "andra tiden: " + tidgrej3;
       
-      window.totaltid = window.tidgrej2 + tidgrej3;
+      window.totaltid = window.totaltid + tidgrej3;
       
-      document.getElementById("totaltid").innerHTML = totaltid;
+      document.getElementById("totaltid").innerHTML = "total tid: " totaltid;
 }
 }    
     
