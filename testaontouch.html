@@ -79,9 +79,8 @@ function touchHandler2(e) {
      document.getElementById("info").innerHTML = "grejen 2 touched!"; 
       
       var tiden = new Date().getTime();
-      var touch2 = window.slapp1.getTime();
-      
       var tidgrej2 = tiden-slapp1;
+      
       document.getElementById("forsta").innerHTML = "forsta tiden: " + tidgrej2;
       window.totaltid = tidgrej2;
       document.getElementById("totaltid").innerHTML = "total tid: " + totaltid;
@@ -94,14 +93,10 @@ function touchHandler3(e) {
      document.getElementById("info").innerHTML = "grejen 3 touched!"; 
       
       var tiden = new Date().getTime();
-      var touch3 = window.slapp1.getTime();
-      
       var tidgrej3 = tiden-slapp2;
       
       document.getElementById("andra").innerHTML = "andra tiden: " + tidgrej3;
-      
-      window.totaltid = window.totaltid + tidgrej3;
-      
+     window.totaltid = window.totaltid + tidgrej3;
       document.getElementById("totaltid").innerHTML = "total tid: " + totaltid;
       
       var totaltidutantouch = tiden - window.slapp1;

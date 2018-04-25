@@ -103,6 +103,9 @@ body {
         $("#ett").click(function(){
         $("#ett").hide();
         window.d = new Date();
+            
+        window.slapp1 = new Date();    
+            
         document.getElementById("tva").style.backgroundColor = "red";
         document.getElementById("tva").style.color = "white";
             
@@ -112,6 +115,9 @@ body {
         $(document).ready(function(){
         $("#tva").click(function(){
         $("#tva").hide();
+            
+        window.slapp2 = new Date();    
+            
             document.getElementById("tre").style.backgroundColor = "red";
         document.getElementById("tre").style.color = "white";
 
@@ -123,6 +129,9 @@ body {
          $(document).ready(function(){
         $("#tre").click(function(){
         $("#tre").hide();
+            
+        window.slapp3 = new Date();    
+            
             document.getElementById("fyra").style.backgroundColor = "red";
         document.getElementById("fyra").style.color = "white";
             
@@ -134,6 +143,9 @@ body {
          $(document).ready(function(){
         $("#fyra").click(function(){
         $("#fyra").hide();
+            
+        window.slapp4 = new Date();    
+            
             document.getElementById("fem").style.backgroundColor = "red";
         document.getElementById("fem").style.color = "white";
             
@@ -146,6 +158,8 @@ body {
         $("#fem").click(function(){
         $("#fem").hide();
             
+        window.slapp5 = new Date();    
+            
         document.getElementById("sex").style.backgroundColor = "red";
         document.getElementById("sex").style.color = "white";
             
@@ -155,6 +169,9 @@ body {
         $(document).ready(function(){
         $("#sex").click(function(){
         $("#sex").hide();
+            
+        window.slapp6 = new Date();    
+            
             document.getElementById("sju").style.backgroundColor = "red";
         document.getElementById("sju").style.color = "white";
         
@@ -165,6 +182,8 @@ body {
         $(document).ready(function(){
         $("#sju").click(function(){
         $("#sju").hide();
+            
+        window.slapp7 = new Date();    
             
         document.getElementById("atta").style.backgroundColor = "red";
         document.getElementById("atta").style.color = "white";
@@ -180,6 +199,8 @@ body {
             
             var tiden = new Date().getTime();
             var starttid = window.d.getTime();
+            
+            window.slapp8 = new Date();
         
             var tidenpertap = ((tiden-starttid)/1000/7).toFixed(4);
             
@@ -193,9 +214,58 @@ body {
         });
         });
         
+        
+        
+        
             
     </script>
     
+    
+<script>
+    
+function sitescript(){  
+    
+    document.getElementById("ett").addEventListener("touchstart", touchHandler2, false);
+    document.getElementById("tva").addEventListener("touchstart", touchHandler3, false);
+
+
+function touchHandler2(e) {
+  if (e.type == "touchstart") {
+       
+     document.getElementById("info").innerHTML = "grejen 2 touched!"; 
+      
+      var tiden = new Date().getTime();
+      
+      var tidgrej2 = tiden-slapp1;
+      document.getElementById("forsta").innerHTML = "forsta tiden: " + tidgrej2;
+      window.totaltid = tidgrej2;
+      document.getElementById("totaltid").innerHTML = "total tid: " + totaltid;
+}
+}
+    
+function touchHandler3(e) {
+  if (e.type == "touchstart") {
+       
+     document.getElementById("info").innerHTML = "grejen 3 touched!"; 
+      
+      var tiden = new Date().getTime();
+      
+      var tidgrej3 = tiden-slapp2;
+      document.getElementById("andra").innerHTML = "andra tiden: " + tidgrej3;
+      window.totaltid = window.totaltid + tidgrej3;
+      document.getElementById("totaltid").innerHTML = "total tid: " + totaltid;
+      
+
+
+}
+}
+    
+    
+    
+    
+}
+    
+    </script>
 </head>
 <body>
     
@@ -210,8 +280,10 @@ body {
     <div class='foo' id="ett">1</div>
    
 
-    
-    
+    <p id="info"></p>
+    <p id="forsta"></p>
+    <p id="andra"></p>
+    <p id="totaltid"></p>
     
     <center>
     <div id="wrapper">
