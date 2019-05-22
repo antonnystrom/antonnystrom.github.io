@@ -348,7 +348,13 @@ font-size: 1em;
     
     }
 
+.works-top{
 
+    height: 0px;
+    width: 100%;
+    background-color: #F2F2F2;
+    
+    }
 
 
 .menu-item{
@@ -679,6 +685,15 @@ margin: 50px;
     
     }
    
+    .works-top{
+
+    height: 50px;
+    width: 100%;
+    background-color: #F2F2F2;
+    
+    }
+    
+    
     .menu-item{
         padding-bottom: 30px;
         }
