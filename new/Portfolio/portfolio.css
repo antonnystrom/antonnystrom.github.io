@@ -123,6 +123,7 @@ font-size: 2em;
 margin-bottom:20px;
 color: #9597FF;
 display: block;
+    width: auto;
     
     
     }
@@ -250,7 +251,7 @@ padding-right: 10%;
 line-height: 1;
     
 font-size: 1.2em;
-    width: 100%;
+    width: auto;
     
     
 }
@@ -435,6 +436,7 @@ line-height: 100px;
     width: 100%;
     background-color:white;
     text-align: center;
+   
 
     
 }
@@ -449,6 +451,7 @@ line-height: 100px;
     height: auto;
     max-width: 1100px;
     background-color:white;
+   
 }
 
 
@@ -727,7 +730,7 @@ margin-top: 30px;
     
     info-block-title{
     margin-top: 100px;
-        width: 100%;
+        width: auto;
     }
     
     
@@ -771,7 +774,7 @@ font-size: 1.5em;
 
 }
       
-      
+info-block-mytitle{ }   
       
 a.footermail{font-size: 1.5em;
 
@@ -811,6 +814,7 @@ font-size: 1.3em;
 
 
     margin: 15px;
+    margin-right: 0px;
     
    
 }
