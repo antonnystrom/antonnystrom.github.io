@@ -548,7 +548,9 @@ margin: 50px;
     
     }
    
-    
+    .menu-item{
+        padding-bottom: 30px;
+        }
     
 
     .img-block{
