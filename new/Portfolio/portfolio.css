@@ -5,6 +5,23 @@ body{
 }
 
 
+p{
+    
+    font-family: 'Open Sans', sans-serif;
+
+
+color: black;
+display: block;
+    text-align: left;
+padding-left: 10%;
+padding-right: 0%;
+    
+font-size: 1.2em;
+    
+    
+    }
+    
+
 h1 {
 font-family: 'Varela Round', sans-serif;
 font-style: normal;
@@ -197,6 +214,102 @@ font-size: 0.9em;
 }
 
 
+
+info-block-title{
+    
+    font-family: 'Open Sans', sans-serif;
+
+
+color: black;
+display: block;
+    text-align: left;
+padding-left: 10%;
+
+    padding-right: 5%;
+    
+font-size: 1.4em;
+   padding-bottom: 5%;
+       width: 550px;
+    
+}
+
+info-block-mytitle{
+    
+     font-family: 'Open Sans', sans-serif;
+font-style:normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: black;
+text-align: left;
+padding-top: 0%;
+padding-left: 10%;
+display:block;
+    
+padding-right: 10%;
+line-height: 1;
+    
+font-size: 1.2em;
+    width: 100%;
+    
+    
+}
+
+info-block-organisation{
+    
+        font-family: 'Open Sans', sans-serif;
+font-style:normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: 6C6C6C;
+text-align: left;
+padding-top: 10px;
+    padding-bottom: 10px;
+padding-left: 10%;
+display: block;    
+    
+padding-right: 10%;
+line-height: 1.2;
+    
+font-size: 1.1em;
+    
+    
+}
+
+
+info-block-years{
+    
+    font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: lighter;
+font-variant: normal;
+text-transform: none;
+color: 6C6C6C;
+display: block;
+text-align: left;
+padding-top: 0%;
+padding-left: 10%;
+    
+padding-right: 10%;
+
+    line-height: 1;
+font-size: 1em;
+    padding-bottom: 10px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 .menu{
 
     height: 80px;
@@ -301,6 +414,35 @@ line-height: 100px;
     width: 100%;
     background-color: #F2F2F2;
     
+}
+
+
+
+.instawrapper{
+
+    
+    
+    
+    
+    
+    height: auto;
+    width: 100%;
+    background-color:white;
+    text-align: center;
+
+    
+}
+
+
+.instabox{
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    background-color:white;
 }
 
 
@@ -454,21 +596,7 @@ font-size: 2em;
 }
 
 
-p{
-    
-    font-family: 'Open Sans', sans-serif;
 
-
-color: black;
-display: block;
-    text-align: left;
-padding-left: 10%;
-
-    
-font-size: 1.2em;
-    
-    
-    }
 
 .btn {
   border: none;
@@ -581,6 +709,21 @@ margin-top: 30px;
 
 }  
     
+    
+    info-block-title{
+    margin-top: 100px;
+        width: 100%;
+    }
+    
+    
+    p{
+   
+padding-right: 10%;
+    
+
+    
+    
+    }
     
     
   } 
