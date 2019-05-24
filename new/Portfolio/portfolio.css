@@ -1,6 +1,12 @@
+
+html{
+  position:relative; 
+  min-height: 100%;
+}
+
 body{
     margin: 0;
-    height: 100%;
+
     
 }
 
@@ -103,13 +109,63 @@ font-size: 2.5em;
     flex-wrap: nowrap;
     justify-content: center;
     
-    background-color: #1c1c1c;
+    background-color: white;
     height: auto;
     width: 100%;
 
     
 }
 
+#footer-about{
+
+    background-color:#F2F2F2 ;
+    }
+
+
+
+.pageContentWrapper{
+  margin-bottom:200px;
+} 
+
+.pageend{
+
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+    background-color: 1c1c1c;
+    height: 200px;
+    width: 100%;
+    padding-bottom: 0px;
+    
+    position: absolute;
+    bottom:0;
+
+    
+}
+
+#p-copyright{
+    
+    color: white;
+    padding-left: 0;
+    display: block;
+    font-size: 1em;
+    color: 9c9c9c;
+    line-height: 0px;
+    
+    
+    
+}
+
+#p-copyright-text{
+    
+    color: white;
+    padding-left: 0;
+    display: block;
+    font-size: 1em;
+    color: 7c7c7c;
+}
 
 .contact-content{
 
