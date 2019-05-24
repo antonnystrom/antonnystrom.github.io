@@ -111,6 +111,21 @@ font-size: 2.5em;
 }
 
 
+.contact-content{
+
+    margin-top: 50px;
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+    background-color: #F2F2F2;
+    height: auto;
+    width: 100%;
+
+    
+}
+
 
 a.footermail{
 
