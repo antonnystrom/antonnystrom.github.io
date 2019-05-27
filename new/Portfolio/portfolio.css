@@ -96,6 +96,10 @@ display: block;
 }
 
 
+#about{
+    display: block;
+}
+
 footerlinks {
 font-family: 'Varela Round', sans-serif;
 font-style: normal;
@@ -243,42 +247,70 @@ font-size: 1.6em;
 
 
 #allafragan{
+   
+    background: url("allafragan.png");
+    background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
     
-    background-image: url(allafragan.png);
-    background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-    height: 100%;
+    
+    height: auto;
 }
 
 
 #rushroute{
     
     background-image: url(rushroute.png);
-    background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-    height: 100%;
+   background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
 }
 
 
 #portfolioweb{
     
     background-image: url(portfolioweb.png);
-    background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-    height: 100%;
+    background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
 }
 
 
 #masterthesis{
     
     background-image: url(masterthesis.png);
-    background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
-    height: 100%;
+    background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
 }
 
 overtitle {
