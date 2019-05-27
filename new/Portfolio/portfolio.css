@@ -16,13 +16,13 @@ p{
     font-family: 'Open Sans', sans-serif;
 
 
-color: black;
+color: 1c1c1c;
 display: block;
     text-align: left;
 padding-left: 10%;
 padding-right: 0%;
-    
-font-size: 1.2em;
+    line-height: 2;
+font-size: 1.1em;
     
     
     }
@@ -856,9 +856,36 @@ font-size: 2em;
     background-color: white;
 }
 
+@media (max-width: 1100px) {
 
+#about-image
+    {   float: left;
+        width: 100%;} 
+    
+#about-text
+    { float: left;
+width: 100%;}
+    
+#expand-early{ margin:0px;}
+    
 
+abouttitle {
+margin-top: 30px;
+ 
+}   
+    
+    
+    p{
+   
+padding-right: 10%;
+    
 
+    
+    
+    }
+    
+       
+    }
 @media (max-width: 800px) {
     
     
@@ -1047,6 +1074,18 @@ font-size: 1.5em;
 
 }
    
+  
+  p{
+   
+font-size: 0.9em;
+      padding-right: 0px;
+      margin-right: 20px;
+    
+
+    
+    
+    }    
+      
       
 .skill{
 
