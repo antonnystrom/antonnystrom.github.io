@@ -185,6 +185,92 @@ font-size: 1.6em;
     color: 7c7c7c;
 }
 
+
+
+#p-project{
+    
+      font-family: 'Open Sans', sans-serif;
+
+
+color: 1c1c1c;
+display: inline;
+    text-align: left;
+padding-left: 0%;
+padding-right: 0%;
+    line-height: 2;
+font-size: 1.1em;
+    
+    
+    
+}
+
+
+
+li{
+    
+      font-family: 'Open Sans', sans-serif;
+font-size: 1.1em;
+    margin-top: 10px;
+    
+    
+    
+}
+
+
+.project-content-wrapper{
+    
+      display: flex;
+  align-items: center;
+  justify-content: center;
+    
+    
+    
+}
+
+
+.project-content-area{
+    
+    width: 100%;
+    max-width: 1100px;
+    
+    
+    
+}
+
+
+.wide-project-img{
+    max-width: 1100px;
+    width: 100%;
+  height: auto;
+    
+    
+    
+    
+}
+
+.big-project-img{
+    max-height: 800px;
+
+    
+    
+    
+    
+}
+
+.project-vid{
+  height:500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    
+    
+    
+    
+}
+
+
+
+
 .contact-content{
 
     margin-top: 50px;
