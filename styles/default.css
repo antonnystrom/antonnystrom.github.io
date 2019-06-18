@@ -422,7 +422,7 @@ font-size: 1.6em;
 
 #allafragan{
    
-    background: url("allafragan.png");
+    background: url("../images/works/allafragan.png");
     background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -439,7 +439,7 @@ font-size: 1.6em;
 
 #rushroute{
     
-    background-image: url(rushroute.png);
+    background-image: url("../images/works/rushroute.png");
    background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -456,7 +456,7 @@ font-size: 1.6em;
 
 #portfolioweb{
     
-    background-image: url(portfolioweb.png);
+    background-image: url(../images/works/portfolioweb.png);
     background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -473,7 +473,7 @@ font-size: 1.6em;
 
 #masterthesis{
     
-    background-image: url(masterthesis.png);
+    background-image: url(../images/works/masterthesis.png);
     background-repeat: no-repeat;
 
     -o-background-size: cover;
