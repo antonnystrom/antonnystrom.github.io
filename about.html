@@ -12,14 +12,22 @@ content="text/html;charset=utf-8" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">     
         <link rel="stylesheet" type="text/css" href="portfolio.css">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+     </script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-     $(window).on('beforeunload', function(){
-    $(window).scrollTop(0);</script>
      
        
 </head>
 <body>
+    
+    
+    
+    <script> window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+} </script>
+    
+    
+    
     <div class="pageContentWrapper">
      
         
