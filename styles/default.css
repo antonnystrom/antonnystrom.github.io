@@ -1207,9 +1207,9 @@ padding-right: 10%;
 @media (max-width: 800px) {
     
     
-    
-   
-    
+    #top-div{
+   display: none;
+    }
     #p-project-text-left-margin 
       {   padding-left: 20px;
     margin-right: 0px;
