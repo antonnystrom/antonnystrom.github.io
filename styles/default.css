@@ -1210,6 +1210,10 @@ padding-right: 10%;
     #top-div{
    display: none;
     }
+    
+     #desktop-hero{
+   display: none;
+    }
     #p-project-text-left-margin 
       {   padding-left: 20px;
     margin-right: 0px;
