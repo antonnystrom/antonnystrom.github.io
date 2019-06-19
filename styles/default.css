@@ -309,6 +309,17 @@ font-size: 1.1em;
     
 }
 
+.desktop-hero{
+    max-width: 1100px;
+    width: 100%;
+  height: auto;
+    display: block;
+    
+    
+    
+    
+}
+
 
 #small-project-img{
     max-width: 500px;
@@ -1211,9 +1222,10 @@ padding-right: 10%;
    display: none;
     }
     
-     #desktop-hero{
+     .desktop-hero{
    display: none;
     }
+    
     #p-project-text-left-margin 
       {   padding-left: 20px;
     margin-right: 0px;
