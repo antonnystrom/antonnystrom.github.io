@@ -590,6 +590,11 @@ font-size: 1.1em;
 }
 
 
+.readmore-link:visited{
+    
+    color: #0022E7;
+}
+
 comingsoon{
 
 
@@ -829,7 +834,7 @@ line-height: 100px;
     
     height: auto;
     width: 100%;
-    background-color: 2645FF;
+    background-color: #0022E7;
     margin-top: 50px;
 
 }
@@ -844,7 +849,7 @@ line-height: 100px;
     width: auto;
     height: auto;
     max-width: 1100px;
-    background-color: 2645FF;
+    background-color: #0022E7;
     flex-grow: 1;
 
     
@@ -855,9 +860,9 @@ line-height: 100px;
     
     float: left;
     width: 33.33%;
-    background-color: 2645FF;
+    background-color: #0022E7;
     padding-bottom: 50px;
-    background-color: 2645FF;
+    background-color: #0022E7;
      
     
 }
@@ -1120,6 +1125,7 @@ a{
     }
 
 
+
 .infobox{
 
  text-align: center;
@@ -1254,6 +1260,37 @@ padding-left: 0px;
     
     .project-img{ 
     display: block;}
+    
+    
+.image-container-wide-tall {
+  position: relative;
+  padding-bottom: 48%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+}
+    
+.image-container-wide-tall img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+    
+    
+    
+.image-container-tall {
+  position: relative;
+  padding-bottom: 112.5%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+}
+
+.image-container-tall img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
     
     .about-me-box{ margin: 0px;}
     
