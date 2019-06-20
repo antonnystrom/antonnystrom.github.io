@@ -1225,6 +1225,12 @@ padding-right: 10%;
 @media (max-width: 800px) {
     
     
+    .image-container-wide-tall {
+ display: none;
+}
+    
+    
+    
     #top-div{
    display: none;
     }
