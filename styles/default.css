@@ -310,16 +310,7 @@ font-size: 1.1em;
     
 }
 
-.desktop-hero{
-    max-width: 1100px;
-    width: 100%;
-  height: auto;
-    display: block;
-    
-    
-    
-    
-}
+
 
 
 #small-project-img{
@@ -366,6 +357,49 @@ font-size: 1.1em;
     
     
     
+}
+
+
+
+.image-container-wide-tall {
+  position: relative;
+  padding-bottom: 48%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+    background: #F2F2F2;
+
+    
+}
+
+.image-container-wide-tall img {
+  position: absolute;
+  top: 0;
+  left: 0;
+    max-width: 1100px;
+  width: 100%;
+    
+}
+  
+    
+    
+    
+  
+    
+.image-container-tall {
+  position: relative;
+  padding-bottom: 112.5%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+    display: none;
+    background: #F2F2F2;
+}
+
+.image-container-tall img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+   
 }
 
 
@@ -1229,6 +1263,10 @@ padding-right: 10%;
  display: none;
 }
     
+    .image-container-tall {
+ display: block;
+}
+    
     
     
     #top-div{
@@ -1268,35 +1306,7 @@ padding-left: 0px;
     display: block;}
     
     
-.image-container-wide-tall {
-  position: relative;
-  padding-bottom: 48%; /* ratio of image height to width */
-  height: 0;
-  overflow: hidden;
-}
-    
-.image-container-wide-tall img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-    
-    
-    
-.image-container-tall {
-  position: relative;
-  padding-bottom: 112.5%; /* ratio of image height to width */
-  height: 0;
-  overflow: hidden;
-}
 
-.image-container-tall img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
     
     .about-me-box{ margin: 0px;}
     
