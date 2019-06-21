@@ -1034,9 +1034,8 @@ font-size: 1.1em;
     margin: 50px;
     margin-bottom: 0px;
     height: 300px;
-    width: auto;
+    width: 1100;
     height: auto;
-    max-width: 1100px;
     background-color: white;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1171,6 +1170,24 @@ font-size: 2em;
 
 }
 
+.btn-default {
+  border: none;
+  background-color: #0022E7;
+  padding: 14px 28px;
+  font-size: 20px;
+    color: white;
+  cursor: pointer;
+  display:block;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 0px;
+    margin-top: 40px;
+    
+    
+ 
+
+}
+
 a{
     
     text-decoration: none;
@@ -1225,8 +1242,20 @@ font-size: 2em;
     background-color: white;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
+    
+    .btn-default {
+        margin-left: 20px;
+    
+    }
+    .project{
+
+
+    width: 100%;
+   
+}
+    
     
 #p-project-text-left-margin 
     {   padding-left: 20px;
@@ -1307,6 +1336,11 @@ padding-right: 10%;
     
      .desktop-hero{
    display: none;
+    }
+    
+    
+    .btn-default{
+   margin-left:20px;
     }
     
     #p-project-text-left-margin 
