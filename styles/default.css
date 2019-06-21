@@ -133,9 +133,7 @@ font-size: 1.5em;
 
 
 
-#about{
-    display: block;
-}
+
 
 footerlinks {
 font-family: 'Varela Round', sans-serif;
@@ -366,6 +364,16 @@ font-size: 1.1em;
   height: 0;
   overflow: hidden;
     background: #F2F2F2;
+
+    
+}
+
+
+.image-container-me img{
+ position: absolute;
+  top: 0;
+  left: 0;
+     width: 100%;
 
     
 }
