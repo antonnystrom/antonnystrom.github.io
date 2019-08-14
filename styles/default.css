@@ -217,7 +217,7 @@ font-size: 1.6em;
     padding-left: 0;
     display: block;
     font-size: 1em;
-    color: 7c7c7c;
+    color: 9c9c9c;
 }
 
 
@@ -261,6 +261,7 @@ font-size: 1em;
     
     padding-left: 0px;
     margin-right: 40px;
+    margin-bottom: 20px;
 
     
 }
@@ -850,6 +851,22 @@ font-size: 2em;
 line-height: 100px;
 }
 
+.small-link{
+
+text-transform: none;
+color: #0022E7;
+    text-decoration: none;
+    
+    }
+
+.small-link:visited{
+
+
+color: #0022E7;
+
+    
+    }
+
 .biglink:hover{
 
 
@@ -1058,40 +1075,31 @@ box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-.textarea-box{
-    
+.textarea-box
+{
     width: 100%;
-
     max-width: 1200px;
     display: flex;
     
-    
-    }
+}
 
-.maintext{
-
-
+.maintext
+{
     margin: 50px;
     width: auto;
     height: auto;
     max-width: 800px;
-    
-    
-   
 }
 
-.img-block{
-
-
+.img-block
+{
     float: left;
     width: 50%;
-  
 }
 
 
-.text-block{
-
-
+.text-block
+{
     float: left;
     width: 50%;
     background-color: white;
