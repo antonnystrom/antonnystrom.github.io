@@ -520,6 +520,23 @@ font-size: 1.6em;
 }
 
 
+#perfectwait{
+    
+    background-image: url("../images/works/perfectwait.jpg");
+   background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
+}
+
+
 #portfolioweb{
     
     background-image: url(../images/works/portfolioweb.png);
