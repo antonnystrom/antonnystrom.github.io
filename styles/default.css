@@ -1317,6 +1317,9 @@ font-size: 2em;
     margin-right: 20px;
     padding-right: 0px;} 
     
+#center-text 
+    {   text-align: center;} 
+    
     
 .project-heading-h3{
     display: block;
