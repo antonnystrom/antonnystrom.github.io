@@ -1318,7 +1318,14 @@ font-size: 2em;
     padding-right: 0px;} 
     
 #center-text 
-    {   text-align: center;} 
+    {   
+        
+     
+        display: block;
+        text-align: center;
+
+        
+} 
     
     
 .project-heading-h3{
