@@ -488,7 +488,7 @@ font-size: 1.6em;
 
 #allafragan{
    
-    background: url("../images/works/allafragan.png");
+    background: url("../images/works/allafragan.jpg");
     background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -505,7 +505,7 @@ font-size: 1.6em;
 
 #rushroute{
     
-    background-image: url("../images/works/rushroute.png");
+    background-image: url("../images/works/rushroute.jpg");
    background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -537,6 +537,25 @@ font-size: 1.6em;
 }
 
 
+
+#gronakortet{
+    
+    background-image: url("../images/works/gronakortet.jpg");
+   background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
+}
+
+
+
 #blockucade{
     
     background-image: url("../images/works/blockucade.jpg");
@@ -556,7 +575,7 @@ font-size: 1.6em;
 
 #portfolioweb{
     
-    background-image: url(../images/works/portfolioweb.png);
+    background-image: url(../images/works/portfolioweb.jpg);
     background-repeat: no-repeat;
 
     -o-background-size: cover;
@@ -573,7 +592,7 @@ font-size: 1.6em;
 
 #masterthesis{
     
-    background-image: url(../images/works/masterthesis.png);
+    background-image: url(../images/works/masterthesis.jpg);
     background-repeat: no-repeat;
 
     -o-background-size: cover;
