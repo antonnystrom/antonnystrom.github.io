@@ -572,6 +572,22 @@ font-size: 1.6em;
 }
 
 
+#producct{
+    
+    background-image: url("../images/works/producct.jpg");
+   background-repeat: no-repeat;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+   background-position: center bottom;
+   background-attachment: scroll;
+    
+    
+    height: auto;
+}
+
 
 #blockucade{
     
